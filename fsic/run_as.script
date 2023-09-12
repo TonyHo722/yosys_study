@@ -1,0 +1,4 @@
+read_verilog sw_caravel.v
+
+hierarchy -check -top AXIS_SW
+proc; opt; fsm; opt; memory; opt

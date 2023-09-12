@@ -1,0 +1,985 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `run.script' --
+
+1. Executing Verilog-2005 frontend: axil_axis.sv
+Parsing Verilog input from `axil_axis.sv' to AST representation.
+Generating RTLIL representation for module `\AXIL_AXIS'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: config_ctrl.v
+Parsing Verilog input from `config_ctrl.v' to AST representation.
+Generating RTLIL representation for module `\CFG_CTRL'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: fsic_clkrst.v
+Parsing Verilog input from `fsic_clkrst.v' to AST representation.
+Generating RTLIL representation for module `\FSIC_CLKRST'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: fsic_coreclk_phase_cnt.v
+Parsing Verilog input from `fsic_coreclk_phase_cnt.v' to AST representation.
+Generating RTLIL representation for module `\fsic_coreclk_phase_cnt'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: fsic_io_serdes_rx.v
+Parsing Verilog input from `fsic_io_serdes_rx.v' to AST representation.
+Generating RTLIL representation for module `\fsic_io_serdes_rx'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: fsic.vo
+Parsing Verilog input from `fsic.vo' to AST representation.
+Generating RTLIL representation for module `\FSIC'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: io_serdes.v
+Parsing Verilog input from `io_serdes.v' to AST representation.
+Generating RTLIL representation for module `\IO_SERDES'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: logic_anlz.dummy_io.vd
+Parsing Verilog input from `logic_anlz.dummy_io.vd' to AST representation.
+Generating RTLIL representation for module `\LOGIC_ANLZ'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: mprj_io.sv
+Parsing Verilog input from `mprj_io.sv' to AST representation.
+Generating RTLIL representation for module `\MPRJ_IO'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: sw_caravel.v
+Parsing Verilog input from `sw_caravel.v' to AST representation.
+Generating RTLIL representation for module `\AXIS_SW'.
+Warning: Replacing memory \mem with list of registers. See sw_caravel.v:393
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: user_subsys.all.v
+Parsing Verilog input from `user_subsys.all.v' to AST representation.
+Generating RTLIL representation for module `\AXIL_SLAV'.
+Generating RTLIL representation for module `\AXIS_MSTR'.
+Generating RTLIL representation for module `\AXIS_SLAV'.
+Generating RTLIL representation for module `\IRQ_MUX'.
+Generating RTLIL representation for module `\LA_MUX'.
+Generating RTLIL representation for module `\USER_PRJ'.
+Generating RTLIL representation for module `\USER_SUBSYS'.
+Successfully finished Verilog frontend.
+
+12. Executing HIERARCHY pass (managing design hierarchy).
+
+12.1. Analyzing design hierarchy..
+Top module:  \FSIC
+Used module:     \MPRJ_IO
+Used module:     \FSIC_CLKRST
+Used module:     \USER_SUBSYS
+Used module:         \LA_MUX
+Used module:         \IRQ_MUX
+Used module:         \AXIS_MSTR
+Used module:         \AXIS_SLAV
+Used module:         \USER_PRJ
+Used module:         \AXIL_SLAV
+Used module:     \LOGIC_ANLZ
+Used module:     \IO_SERDES
+Used module:         \fsic_io_serdes_rx
+Used module:         \fsic_coreclk_phase_cnt
+Used module:     \AXIS_SW
+Used module:     \AXIL_AXIS
+Used module:     \CFG_CTRL
+
+12.2. Executing AST frontend in derive mode using pre-parsed AST for module `\MPRJ_IO'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.3. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_SUBSYS'.
+Parameter \pADDR_WIDTH = 15
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+
+12.4. Executing AST frontend in derive mode using pre-parsed AST for module `\LOGIC_ANLZ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.5. Executing AST frontend in derive mode using pre-parsed AST for module `\IO_SERDES'.
+Parameter \pSERIALIO_WIDTH = 12
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Generating RTLIL representation for module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+
+12.6. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIS_SW'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Warning: Replacing memory \mem with list of registers. See sw_caravel.v:393
+
+12.7. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIL_AXIS'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.8. Executing AST frontend in derive mode using pre-parsed AST for module `\CFG_CTRL'.
+Parameter \pADDR_WIDTH = 15
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+
+12.9. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Generating RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.10. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.11. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.12. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.13. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.14. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.15. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.16. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.17. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.18. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.19. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.20. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.21. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_coreclk_phase_cnt'.
+Parameter \pCLK_RATIO = 4
+Generating RTLIL representation for module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+
+12.22. Executing AST frontend in derive mode using pre-parsed AST for module `\LA_MUX'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.23. Executing AST frontend in derive mode using pre-parsed AST for module `\IRQ_MUX'.
+Parameter \pADDR_WIDTH = 10
+Generating RTLIL representation for module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+
+12.24. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIS_MSTR'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.25. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIS_SLAV'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.26. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.27. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.28. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.29. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.30. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIL_SLAV'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Generating RTLIL representation for module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.31. Analyzing design hierarchy..
+Top module:  \FSIC
+Used module:     $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     \FSIC_CLKRST
+Used module:     $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32
+Used module:         \LA_MUX
+Used module:         \IRQ_MUX
+Used module:         \AXIS_MSTR
+Used module:         \AXIS_SLAV
+Used module:         \USER_PRJ
+Used module:         \AXIL_SLAV
+Used module:     $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES
+Used module:         \fsic_io_serdes_rx
+Used module:         \fsic_coreclk_phase_cnt
+Used module:     $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32
+
+12.32. Executing AST frontend in derive mode using pre-parsed AST for module `\LA_MUX'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.33. Executing AST frontend in derive mode using pre-parsed AST for module `\IRQ_MUX'.
+Parameter \pADDR_WIDTH = 10
+Found cached RTLIL representation for module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+
+12.34. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIS_MSTR'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.35. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIS_SLAV'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.36. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.37. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.38. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.39. Executing AST frontend in derive mode using pre-parsed AST for module `\USER_PRJ'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.40. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIL_SLAV'.
+Parameter \pADDR_WIDTH = 12
+Parameter \pDATA_WIDTH = 32
+Found cached RTLIL representation for module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+
+12.41. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.42. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.43. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.44. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.45. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.46. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.47. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.48. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.49. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.50. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.51. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.52. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_io_serdes_rx'.
+Parameter \pRxFIFO_DEPTH = 5
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+
+12.53. Executing AST frontend in derive mode using pre-parsed AST for module `\fsic_coreclk_phase_cnt'.
+Parameter \pCLK_RATIO = 4
+Found cached RTLIL representation for module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+
+12.54. Analyzing design hierarchy..
+Top module:  \FSIC
+Used module:     $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     \FSIC_CLKRST
+Used module:     $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32
+Used module:         $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\IRQ_MUX\pADDR_WIDTH=10
+Used module:         $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES
+Used module:         $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4
+Used module:         $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4
+Used module:     $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32
+
+12.55. Analyzing design hierarchy..
+Top module:  \FSIC
+Used module:     $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     \FSIC_CLKRST
+Used module:     $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32
+Used module:         $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\IRQ_MUX\pADDR_WIDTH=10
+Used module:         $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:         $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES
+Used module:         $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4
+Used module:         $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4
+Used module:     $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32
+Used module:     $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32
+Removing unused module `\USER_SUBSYS'.
+Removing unused module `\USER_PRJ'.
+Removing unused module `\LA_MUX'.
+Removing unused module `\IRQ_MUX'.
+Removing unused module `\AXIS_SLAV'.
+Removing unused module `\AXIS_MSTR'.
+Removing unused module `\AXIL_SLAV'.
+Removing unused module `\AXIS_SW'.
+Removing unused module `\MPRJ_IO'.
+Removing unused module `\LOGIC_ANLZ'.
+Removing unused module `\IO_SERDES'.
+Removing unused module `\fsic_io_serdes_rx'.
+Removing unused module `\fsic_coreclk_phase_cnt'.
+Removing unused module `\CFG_CTRL'.
+Removing unused module `\AXIL_AXIS'.
+Removed 15 unused modules.
+Warning: Resizing cell port FSIC.U_IO_SERDES0.axi_araddr from 15 bits to 12 bits.
+Warning: Resizing cell port FSIC.U_IO_SERDES0.axi_awaddr from 15 bits to 12 bits.
+
+13. Executing PROC pass (convert processes to netlists).
+
+13.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:71$804 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:60$802 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:48$800 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:36$797 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:171$794 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:154$790 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:140$787 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:126$784 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:108$780 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:93$777 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:81$775 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:67$772 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:48$767 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:558$746 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 10 switch rules as full_case in process $proc$config_ctrl.v:440$740 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:413$737 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:333$734 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 3 switch rules as full_case in process $proc$config_ctrl.v:279$730 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 1 switch rules as full_case in process $proc$config_ctrl.v:254$712 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Removed 1 dead cases from process $proc$sw_caravel.v:20$604 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 1 switch rules as full_case in process $proc$sw_caravel.v:20$604 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Removed 1 dead cases from process $proc$sw_caravel.v:20$601 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 1 switch rules as full_case in process $proc$sw_caravel.v:20$601 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 5 switch rules as full_case in process $proc$sw_caravel.v:401$557 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 2 switch rules as full_case in process $proc$sw_caravel.v:391$550 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 7 switch rules as full_case in process $proc$sw_caravel.v:294$531 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Removed 2 dead cases from process $proc$sw_caravel.v:262$520 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 8 switch rules as full_case in process $proc$sw_caravel.v:262$520 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 8 switch rules as full_case in process $proc$sw_caravel.v:245$517 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Removed 2 dead cases from process $proc$sw_caravel.v:224$514 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 4 switch rules as full_case in process $proc$sw_caravel.v:224$514 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 2 switch rules as full_case in process $proc$sw_caravel.v:186$500 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Marked 3 switch rules as full_case in process $proc$io_serdes.v:454$461 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:352$459 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 1 switch rules as full_case in process $proc$io_serdes.v:281$447 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 3 switch rules as full_case in process $proc$io_serdes.v:241$443 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:223$440 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:205$435 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:156$429 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 1 switch rules as full_case in process $proc$fsic_clkrst.v:60$153 in module FSIC_CLKRST.
+Marked 1 switch rules as full_case in process $proc$fsic_clkrst.v:48$152 in module FSIC_CLKRST.
+Marked 1 switch rules as full_case in process $proc$fsic_clkrst.v:36$151 in module FSIC_CLKRST.
+Removed a total of 6 dead cases.
+
+13.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$765'.
+  Set init value: \axi_rready_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$764'.
+  Set init value: \axi_araddr_o = 15'000000000000000
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$763'.
+  Set init value: \axi_arvalid_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$762'.
+  Set init value: \axi_wstrb_o = 4'0000
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$761'.
+  Set init value: \axi_wdata_o = 0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$760'.
+  Set init value: \axi_wvalid_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$759'.
+  Set init value: \axi_awaddr_o = 15'000000000000000
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$758'.
+  Set init value: \axi_awvalid_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$757'.
+  Set init value: \aa_cfg_arready_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$756'.
+  Set init value: \aa_cfg_wready_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$755'.
+  Set init value: \aa_cfg_awready_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$754'.
+  Set init value: \aa_cfg_rvalid_o = 1'0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$753'.
+  Set init value: \aa_cfg_rdata_o = 0
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$752'.
+  Set init value: \axi_grant_o_reg = 1'0
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:155$615'.
+  Set init value: \pre_rd_ptr_reg = 5'00000
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:154$614'.
+  Set init value: \rd_ptr_reg = 5'00000
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:153$613'.
+  Set init value: \wr_ptr_reg = 5'00000
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:148$612'.
+  Set init value: \m_axis_tvalid_reg = 1'0
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:142$611'.
+  Set init value: \frame_start_reg = 1'0
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$610'.
+  Set init value: \shift_hi_grant = 3'000
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$609'.
+  Set init value: \shift_grant = 3'000
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$608'.
+  Set init value: \grant_reg = 3'000
+Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:132$607'.
+  Set init value: \TH_reg = 4'0101
+
+13.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$804'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$802'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$797'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$790'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$787'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$784'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$780'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$777'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$772'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$767'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$746'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+Found async reset \wb_rst in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$737'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+Found async reset \wb_rst in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$712'.
+Found async reset \axi_reset_n in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:294$531'.
+Found async reset \axi_reset_n in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:186$500'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$461'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$459'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$447'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$443'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$440'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$435'.
+Found async reset \axi_reset_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$429'.
+Found async reset \wb_rst in `\FSIC_CLKRST.$proc$fsic_clkrst.v:60$153'.
+Found async reset \wb_rst in `\FSIC_CLKRST.$proc$fsic_clkrst.v:48$152'.
+Found async reset \wb_rst in `\FSIC_CLKRST.$proc$fsic_clkrst.v:36$151'.
+
+13.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$804'.
+     1/1: $0\phase_cnt[1:0]
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$802'.
+     1/2: $0\clk_seq[3:0] [3:1]
+     2/2: $0\clk_seq[3:0] [0]
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
+     1/2: $0\sync_core_clk_toggle[0:0]
+     2/2: $0\pre_core_clk_toggle[0:0]
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$797'.
+     1/1: $0\core_clk_toggle[0:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
+     1/2: $0\rx_sync_fifo_valid[0:0]
+     2/2: $0\rx_sync_fifo[3:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$790'.
+     1/2: $0\rx_start_delay[2:0] [2:1]
+     2/2: $0\rx_start_delay[2:0] [0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$787'.
+     1/1: $0\rx_shift_phase_cnt[1:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$784'.
+     1/2: $0\rx_shift_reg[3:0] [3]
+     2/2: $0\rx_shift_reg[3:0] [2:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$780'.
+     1/1: $0\r_ptr[2:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$777'.
+     1/1: $0\rx_start[0:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
+     1/2: $0\w_ptr_sync[0:0]
+     2/2: $0\w_ptr_pre[0:0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$772'.
+     1/5: $0\RxFifo[4:0] [4]
+     2/5: $0\RxFifo[4:0] [3]
+     3/5: $0\RxFifo[4:0] [2]
+     4/5: $0\RxFifo[4:0] [1]
+     5/5: $0\RxFifo[4:0] [0]
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$767'.
+     1/1: $0\w_ptr[2:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$765'.
+     1/1: $1\axi_rready_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$764'.
+     1/1: $1\axi_araddr_o[14:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$763'.
+     1/1: $1\axi_arvalid_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$762'.
+     1/1: $1\axi_wstrb_o[3:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$761'.
+     1/1: $1\axi_wdata_o[31:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$760'.
+     1/1: $1\axi_wvalid_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$759'.
+     1/1: $1\axi_awaddr_o[14:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$758'.
+     1/1: $1\axi_awvalid_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$757'.
+     1/1: $1\aa_cfg_arready_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$756'.
+     1/1: $1\aa_cfg_wready_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$755'.
+     1/1: $1\aa_cfg_awready_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$754'.
+     1/1: $1\aa_cfg_rvalid_o[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$753'.
+     1/1: $1\aa_cfg_rdata_o[31:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$752'.
+     1/1: $1\axi_grant_o_reg[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$746'.
+     1/1: $0\user_prj_sel_o[4:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+     1/13: $0\axi_rready_o[0:0]
+     2/13: $0\axi_araddr_o[14:0]
+     3/13: $0\axi_arvalid_o[0:0]
+     4/13: $0\axi_wstrb_o[3:0]
+     5/13: $0\axi_wdata_o[31:0]
+     6/13: $0\axi_wvalid_o[0:0]
+     7/13: $0\axi_awaddr_o[14:0]
+     8/13: $0\axi_awvalid_o[0:0]
+     9/13: $0\m_axi_fsm_reg[2:0]
+    10/13: $0\f_axi_rdata[31:0]
+    11/13: $0\f_axi_request_done[0:0]
+    12/13: $0\wb_axi_rdata[31:0]
+    13/13: $0\wb_axi_request_done[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$737'.
+     1/1: $0\axi_grant_o_reg[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+     1/11: $0\aa_cfg_arready_o[0:0]
+     2/11: $0\aa_cfg_wready_o[0:0]
+     3/11: $0\aa_cfg_awready_o[0:0]
+     4/11: $0\aa_cfg_rvalid_o[0:0]
+     5/11: $0\aa_cfg_rdata_o[31:0]
+     6/11: $0\f_axi_wdata[31:0]
+     7/11: $0\f_axi_request_add[31:0]
+     8/11: $0\f_axi_wstrb[3:0]
+     9/11: $0\f_axi_request_rw[0:0]
+    10/11: $0\f_axi_request[0:0]
+    11/11: $0\f_axi_fsm_reg[2:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
+     1/8: $0\wbs_rdata_o[31:0]
+     2/8: $0\wbs_ack_o[0:0]
+     3/8: $0\wb_axi_wdata[31:0]
+     4/8: $0\wb_axi_request_add[31:0]
+     5/8: $0\wb_axi_wstrb[3:0]
+     6/8: $0\wb_axi_request_rw[0:0]
+     7/8: $0\wb_axi_request[0:0]
+     8/8: $0\wb_fsm_reg[0:0]
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$712'.
+     1/7: $0\cc_up_enable_o[0:0]
+     2/7: $0\cc_la_enable_o[0:0]
+     3/7: $0\cc_is_enable_o[0:0]
+     4/7: $0\cc_as_enable_o[0:0]
+     5/7: $0\cc_aa_enable_o[0:0]
+     6/7: $0\cc_sub_enable[0:0]
+     7/7: $0\cc_enable[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$636'.
+     1/1: $0\mb_irq[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$635'.
+     1/1: $0\aa_as_tuser[1:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$634'.
+     1/1: $0\aa_as_tvalid[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$633'.
+     1/1: $0\aa_as_tlast[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$632'.
+     1/1: $0\aa_as_tkeep[3:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$631'.
+     1/1: $0\aa_as_tstrb[3:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$630'.
+     1/1: $0\aa_as_tdata[31:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$629'.
+     1/1: $0\aa_as_tready[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$628'.
+     1/1: $0\s_arready[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$627'.
+     1/1: $0\s_wready[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$626'.
+     1/1: $0\s_awready[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$625'.
+     1/1: $0\s_rvalid[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$624'.
+     1/1: $0\s_rdata[31:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$623'.
+     1/1: $0\m_rready[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$622'.
+     1/1: $0\m_araddr[31:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$621'.
+     1/1: $0\m_arvalid[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$620'.
+     1/1: $0\m_wstrb[3:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$619'.
+     1/1: $0\m_wdata[31:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$618'.
+     1/1: $0\m_wvalid[0:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$617'.
+     1/1: $0\m_awaddr[31:0]
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$616'.
+     1/1: $0\m_awvalid[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:155$615'.
+     1/1: $1\pre_rd_ptr_reg[4:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:154$614'.
+     1/1: $1\rd_ptr_reg[4:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:153$613'.
+     1/1: $1\wr_ptr_reg[4:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:148$612'.
+     1/1: $1\m_axis_tvalid_reg[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:142$611'.
+     1/1: $1\frame_start_reg[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$610'.
+     1/1: $4\shift_hi_grant[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$609'.
+     1/1: $4\shift_grant[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$608'.
+     1/1: $1\grant_reg[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:132$607'.
+     1/1: $1\TH_reg[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$604'.
+     1/2: $1$mem2reg_rd$\mem$sw_caravel.v:173$490_DATA[44:0]$606
+     2/2: $0$mem2reg_rd$\mem$sw_caravel.v:173$490_DATA[44:0]$605
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$601'.
+     1/2: $1$mem2reg_rd$\mem$sw_caravel.v:172$489_DATA[44:0]$603
+     2/2: $0$mem2reg_rd$\mem$sw_caravel.v:172$489_DATA[44:0]$602
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:401$557'.
+     1/6: $0\as_is_tready_reg[0:0]
+     2/6: $0\delaynext[0:0]
+     3/6: $0\as_aa_tvalid_reg[0:0]
+     4/6: $0\as_up_tvalid_reg[0:0]
+     5/6: $0\pre_rd_ptr_reg[4:0]
+     6/6: $0\rd_ptr_reg[4:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:391$550'.
+     1/21: $1$mem2reg_wr$\mem$sw_caravel.v:393$491_ADDR[3:0]$554
+     2/21: $1$mem2reg_wr$\mem$sw_caravel.v:393$491_DATA[44:0]$553
+     3/21: $0$mem2reg_wr$\mem$sw_caravel.v:393$491_ADDR[3:0]$552
+     4/21: $0$mem2reg_wr$\mem$sw_caravel.v:393$491_DATA[44:0]$551
+     5/21: $0\mem[15][44:0]
+     6/21: $0\mem[14][44:0]
+     7/21: $0\mem[13][44:0]
+     8/21: $0\mem[12][44:0]
+     9/21: $0\mem[11][44:0]
+    10/21: $0\mem[10][44:0]
+    11/21: $0\mem[9][44:0]
+    12/21: $0\mem[8][44:0]
+    13/21: $0\mem[7][44:0]
+    14/21: $0\mem[6][44:0]
+    15/21: $0\mem[5][44:0]
+    16/21: $0\mem[4][44:0]
+    17/21: $0\mem[3][44:0]
+    18/21: $0\mem[2][44:0]
+    19/21: $0\mem[1][44:0]
+    20/21: $0\mem[0][44:0]
+    21/21: $0\wr_ptr_reg[4:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:294$531'.
+     1/13: $0\hi_req_flag[2:0] [2]
+     2/13: $0\hi_req_flag[2:0] [1]
+     3/13: $0\hi_req_flag[2:0] [0]
+     4/13: $0\m_axis_tuser_reg[1:0]
+     5/13: $0\m_axis_tvalid_reg[0:0]
+     6/13: $0\m_axis_tlast_reg[0:0]
+     7/13: $0\m_axis_tkeep_reg[3:0]
+     8/13: $0\m_axis_tstrb_reg[3:0]
+     9/13: $0\m_axis_tdata_reg[31:0]
+    10/13: $0\m_axis_tid_reg[1:0]
+    11/13: $0\frame_start_reg[0:0]
+    12/13: $0\base_ptr[1:0]
+    13/13: $0\grant_reg[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:262$520'.
+     1/11: $5\grant_next[2:0]
+     2/11: $4\frame_start_next[0:0]
+     3/11: $3\frame_start_next[0:0]
+     4/11: $2\frame_start_next[0:0]
+     5/11: $4\grant_next[2:0]
+     6/11: $3\grant_next[2:0]
+     7/11: $2\grant_next[2:0]
+     8/11: $1\frame_start_next[0:0]
+     9/11: $1\grant_next[2:0]
+    10/11: $0\frame_start_next[0:0]
+    11/11: $0\grant_next[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:245$517'.
+     1/16: $5\shift_grant[2:2]
+     2/16: $4\shift_grant[2:1] [0]
+     3/16: $4\shift_grant[2:1] [1]
+     4/16: $3\shift_grant[2:0] [0]
+     5/16: $3\shift_grant[2:0] [2:1]
+     6/16: $5\shift_hi_grant[2:2]
+     7/16: $4\shift_hi_grant[2:1] [0]
+     8/16: $4\shift_hi_grant[2:1] [1]
+     9/16: $3\shift_hi_grant[2:0] [0]
+    10/16: $3\shift_hi_grant[2:0] [2:1]
+    11/16: $2\shift_hi_grant[2:0]
+    12/16: $2\shift_grant[2:0]
+    13/16: $1\shift_hi_grant[2:0]
+    14/16: $1\shift_grant[2:0]
+    15/16: $0\shift_hi_grant[2:0]
+    16/16: $0\shift_grant[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:224$514'.
+     1/8: $3\shift_req[2:0]
+     2/8: $3\shift_hi_req[2:0]
+     3/8: $2\shift_hi_req[2:0]
+     4/8: $2\shift_req[2:0]
+     5/8: $1\shift_hi_req[2:0]
+     6/8: $1\shift_req[2:0]
+     7/8: $0\shift_hi_req[2:0]
+     8/8: $0\shift_req[2:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:186$500'.
+     1/1: $0\TH_reg[3:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$461'.
+     1/1: $0\is_as_tready_out[0:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$459'.
+     1/1: $0\rxen[0:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$447'.
+     1/5: $0\as_is_tlast_tvalid_tready_buf[3:0]
+     2/5: $0\as_is_tid_tuser_buf[3:0]
+     3/5: $0\as_is_tkeep_buf[3:0]
+     4/5: $0\as_is_tstrb_buf[3:0]
+     5/5: $0\as_is_tdata_buf[31:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$443'.
+     1/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [3]
+     2/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [0]
+     3/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [1]
+     4/9: $0\pre_as_is_tid_tuser_buf[3:0] [3:2]
+     5/9: $0\pre_as_is_tid_tuser_buf[3:0] [1:0]
+     6/9: $0\pre_as_is_tkeep_buf[3:0]
+     7/9: $0\pre_as_is_tstrb_buf[3:0]
+     8/9: $0\pre_as_is_tdata_buf[31:0]
+     9/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [2]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$440'.
+     1/1: $0\tx_shift_phase_cnt[1:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$435'.
+     1/1: $0\txen[0:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$429'.
+     1/2: $0\txen_ctl[0:0]
+     2/2: $0\rxen_ctl[0:0]
+Creating decoders for process `\FSIC_CLKRST.$proc$fsic_clkrst.v:60$153'.
+     1/1: $0\uck2_rst_nr[2:0]
+Creating decoders for process `\FSIC_CLKRST.$proc$fsic_clkrst.v:48$152'.
+     1/1: $0\axis_rst_nr[2:0]
+Creating decoders for process `\FSIC_CLKRST.$proc$fsic_clkrst.v:36$151'.
+     1/1: $0\axi_reset_nr[2:0]
+
+13.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\mb_irq' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$636'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tuser' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$635'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$634'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tlast' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$633'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tkeep' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$632'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tstrb' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$631'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$630'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$629'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_arready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$628'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_wready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$627'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_awready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$626'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_rvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$625'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_rdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$624'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_rready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$623'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_araddr' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$622'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_arvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$621'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wstrb' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$620'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$619'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$618'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_awaddr' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$617'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_awvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$616'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$mem2reg_rd$\mem$sw_caravel.v:173$490_DATA' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$604'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$mem2reg_rd$\mem$sw_caravel.v:172$489_DATA' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$601'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\grant_next' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:262$520'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\frame_start_next' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:262$520'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_grant' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:245$517'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_hi_grant' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:245$517'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_req' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:224$514'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_hi_req' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:224$514'.
+
+13.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\phase_cnt' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$804'.
+  created $adff cell `$procdff$2014' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\clk_seq' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$802'.
+  created $adff cell `$procdff$2015' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\pre_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
+  created $adff cell `$procdff$2016' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\sync_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
+  created $adff cell `$procdff$2017' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$797'.
+  created $adff cell `$procdff$2018' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
+  created $adff cell `$procdff$2019' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo_valid' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
+  created $adff cell `$procdff$2020' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start_delay' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$790'.
+  created $adff cell `$procdff$2021' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_phase_cnt' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$787'.
+  created $adff cell `$procdff$2022' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_reg' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$784'.
+  created $adff cell `$procdff$2023' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\r_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$780'.
+  created $adff cell `$procdff$2024' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$777'.
+  created $adff cell `$procdff$2025' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_pre' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
+  created $adff cell `$procdff$2026' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_sync' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
+  created $adff cell `$procdff$2027' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\RxFifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$772'.
+  created $adff cell `$procdff$2028' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$767'.
+  created $adff cell `$procdff$2029' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\user_prj_sel_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$746'.
+  created $adff cell `$procdff$2030' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request_done' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2031' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_rdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2032' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_done' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2033' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_rdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2034' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\m_axi_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2035' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_awvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2036' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_awaddr_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2037' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2038' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2039' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wstrb_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2040' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_arvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2041' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_araddr_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2042' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_rready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+  created $adff cell `$procdff$2043' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_grant_o_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$737'.
+  created $adff cell `$procdff$2044' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2045' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2046' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_rw' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2047' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_wstrb' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2048' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_add' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2049' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_wdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2050' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_rdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2051' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_rvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2052' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_awready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2053' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_wready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2054' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_arready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+  created $adff cell `$procdff$2055' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
+  created $adff cell `$procdff$2056' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
+  created $adff cell `$prERROR: Multiple edge sensitive events found for this signal!

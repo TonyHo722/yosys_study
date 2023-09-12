@@ -1,0 +1,207 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `run_as.script' --
+
+1. Executing Verilog-2005 frontend: sw_caravel.v
+Parsing Verilog input from `sw_caravel.v' to AST representation.
+Generating RTLIL representation for module `\AXIS_SW'.
+Warning: Replacing memory \mem with list of registers. See sw_caravel.v:393
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \AXIS_SW
+
+2.2. Analyzing design hierarchy..
+Top module:  \AXIS_SW
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$sw_caravel.v:20$116 in module AXIS_SW.
+Marked 1 switch rules as full_case in process $proc$sw_caravel.v:20$116 in module AXIS_SW.
+Removed 1 dead cases from process $proc$sw_caravel.v:20$113 in module AXIS_SW.
+Marked 1 switch rules as full_case in process $proc$sw_caravel.v:20$113 in module AXIS_SW.
+Marked 5 switch rules as full_case in process $proc$sw_caravel.v:401$69 in module AXIS_SW.
+Marked 2 switch rules as full_case in process $proc$sw_caravel.v:391$62 in module AXIS_SW.
+Marked 7 switch rules as full_case in process $proc$sw_caravel.v:294$43 in module AXIS_SW.
+Removed 2 dead cases from process $proc$sw_caravel.v:262$32 in module AXIS_SW.
+Marked 8 switch rules as full_case in process $proc$sw_caravel.v:262$32 in module AXIS_SW.
+Marked 8 switch rules as full_case in process $proc$sw_caravel.v:245$29 in module AXIS_SW.
+Removed 2 dead cases from process $proc$sw_caravel.v:224$26 in module AXIS_SW.
+Marked 4 switch rules as full_case in process $proc$sw_caravel.v:224$26 in module AXIS_SW.
+Marked 2 switch rules as full_case in process $proc$sw_caravel.v:186$12 in module AXIS_SW.
+Removed a total of 6 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:155$127'.
+  Set init value: \pre_rd_ptr_reg = 5'00000
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:154$126'.
+  Set init value: \rd_ptr_reg = 5'00000
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:153$125'.
+  Set init value: \wr_ptr_reg = 5'00000
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:148$124'.
+  Set init value: \m_axis_tvalid_reg = 1'0
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:142$123'.
+  Set init value: \frame_start_reg = 1'0
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:141$122'.
+  Set init value: \shift_hi_grant = 3'000
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:141$121'.
+  Set init value: \shift_grant = 3'000
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:141$120'.
+  Set init value: \grant_reg = 3'000
+Found init rule in `\AXIS_SW.$proc$sw_caravel.v:132$119'.
+  Set init value: \TH_reg = 4'0101
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \axi_reset_n in `\AXIS_SW.$proc$sw_caravel.v:294$43'.
+Found async reset \axi_reset_n in `\AXIS_SW.$proc$sw_caravel.v:186$12'.
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:155$127'.
+     1/1: $1\pre_rd_ptr_reg[4:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:154$126'.
+     1/1: $1\rd_ptr_reg[4:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:153$125'.
+     1/1: $1\wr_ptr_reg[4:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:148$124'.
+     1/1: $1\m_axis_tvalid_reg[0:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:142$123'.
+     1/1: $1\frame_start_reg[0:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:141$122'.
+     1/1: $4\shift_hi_grant[2:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:141$121'.
+     1/1: $4\shift_grant[2:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:141$120'.
+     1/1: $1\grant_reg[2:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:132$119'.
+     1/1: $1\TH_reg[3:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:20$116'.
+     1/2: $1$mem2reg_rd$\mem$sw_caravel.v:173$2_DATA[44:0]$118
+     2/2: $0$mem2reg_rd$\mem$sw_caravel.v:173$2_DATA[44:0]$117
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:20$113'.
+     1/2: $1$mem2reg_rd$\mem$sw_caravel.v:172$1_DATA[44:0]$115
+     2/2: $0$mem2reg_rd$\mem$sw_caravel.v:172$1_DATA[44:0]$114
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:401$69'.
+     1/6: $0\as_is_tready_reg[0:0]
+     2/6: $0\delaynext[0:0]
+     3/6: $0\as_aa_tvalid_reg[0:0]
+     4/6: $0\as_up_tvalid_reg[0:0]
+     5/6: $0\pre_rd_ptr_reg[4:0]
+     6/6: $0\rd_ptr_reg[4:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:391$62'.
+     1/21: $1$mem2reg_wr$\mem$sw_caravel.v:393$3_ADDR[3:0]$65
+     2/21: $1$mem2reg_wr$\mem$sw_caravel.v:393$3_DATA[44:0]$66
+     3/21: $0$mem2reg_wr$\mem$sw_caravel.v:393$3_DATA[44:0]$64
+     4/21: $0$mem2reg_wr$\mem$sw_caravel.v:393$3_ADDR[3:0]$63
+     5/21: $0\mem[15][44:0]
+     6/21: $0\mem[14][44:0]
+     7/21: $0\mem[13][44:0]
+     8/21: $0\mem[12][44:0]
+     9/21: $0\mem[11][44:0]
+    10/21: $0\mem[10][44:0]
+    11/21: $0\mem[9][44:0]
+    12/21: $0\mem[8][44:0]
+    13/21: $0\mem[7][44:0]
+    14/21: $0\mem[6][44:0]
+    15/21: $0\mem[5][44:0]
+    16/21: $0\mem[4][44:0]
+    17/21: $0\mem[3][44:0]
+    18/21: $0\mem[2][44:0]
+    19/21: $0\mem[1][44:0]
+    20/21: $0\mem[0][44:0]
+    21/21: $0\wr_ptr_reg[4:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:294$43'.
+     1/13: $0\hi_req_flag[2:0] [2]
+     2/13: $0\hi_req_flag[2:0] [1]
+     3/13: $0\hi_req_flag[2:0] [0]
+     4/13: $0\m_axis_tuser_reg[1:0]
+     5/13: $0\m_axis_tvalid_reg[0:0]
+     6/13: $0\m_axis_tlast_reg[0:0]
+     7/13: $0\m_axis_tkeep_reg[3:0]
+     8/13: $0\m_axis_tstrb_reg[3:0]
+     9/13: $0\m_axis_tdata_reg[31:0]
+    10/13: $0\m_axis_tid_reg[1:0]
+    11/13: $0\frame_start_reg[0:0]
+    12/13: $0\grant_reg[2:0]
+    13/13: $0\base_ptr[1:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:262$32'.
+     1/11: $5\grant_next[2:0]
+     2/11: $4\frame_start_next[0:0]
+     3/11: $3\frame_start_next[0:0]
+     4/11: $2\frame_start_next[0:0]
+     5/11: $4\grant_next[2:0]
+     6/11: $3\grant_next[2:0]
+     7/11: $2\grant_next[2:0]
+     8/11: $1\frame_start_next[0:0]
+     9/11: $1\grant_next[2:0]
+    10/11: $0\frame_start_next[0:0]
+    11/11: $0\grant_next[2:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:245$29'.
+     1/16: $5\shift_grant[2:2]
+     2/16: $4\shift_grant[2:1] [0]
+     3/16: $4\shift_grant[2:1] [1]
+     4/16: $3\shift_grant[2:0] [0]
+     5/16: $3\shift_grant[2:0] [2:1]
+     6/16: $5\shift_hi_grant[2:2]
+     7/16: $4\shift_hi_grant[2:1] [0]
+     8/16: $4\shift_hi_grant[2:1] [1]
+     9/16: $3\shift_hi_grant[2:0] [0]
+    10/16: $3\shift_hi_grant[2:0] [2:1]
+    11/16: $2\shift_hi_grant[2:0]
+    12/16: $2\shift_grant[2:0]
+    13/16: $1\shift_hi_grant[2:0]
+    14/16: $1\shift_grant[2:0]
+    15/16: $0\shift_hi_grant[2:0]
+    16/16: $0\shift_grant[2:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:224$26'.
+     1/8: $3\shift_req[2:0]
+     2/8: $3\shift_hi_req[2:0]
+     3/8: $2\shift_hi_req[2:0]
+     4/8: $2\shift_req[2:0]
+     5/8: $1\shift_hi_req[2:0]
+     6/8: $1\shift_req[2:0]
+     7/8: $0\shift_hi_req[2:0]
+     8/8: $0\shift_req[2:0]
+Creating decoders for process `\AXIS_SW.$proc$sw_caravel.v:186$12'.
+     1/1: $0\TH_reg[3:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\AXIS_SW.$mem2reg_rd$\mem$sw_caravel.v:173$2_DATA' from process `\AXIS_SW.$proc$sw_caravel.v:20$116'.
+No latch inferred for signal `\AXIS_SW.$mem2reg_rd$\mem$sw_caravel.v:172$1_DATA' from process `\AXIS_SW.$proc$sw_caravel.v:20$113'.
+No latch inferred for signal `\AXIS_SW.\grant_next' from process `\AXIS_SW.$proc$sw_caravel.v:262$32'.
+No latch inferred for signal `\AXIS_SW.\frame_start_next' from process `\AXIS_SW.$proc$sw_caravel.v:262$32'.
+No latch inferred for signal `\AXIS_SW.\shift_grant' from process `\AXIS_SW.$proc$sw_caravel.v:245$29'.
+No latch inferred for signal `\AXIS_SW.\shift_hi_grant' from process `\AXIS_SW.$proc$sw_caravel.v:245$29'.
+No latch inferred for signal `\AXIS_SW.\shift_req' from process `\AXIS_SW.$proc$sw_caravel.v:224$26'.
+No latch inferred for signal `\AXIS_SW.\shift_hi_req' from process `\AXIS_SW.$proc$sw_caravel.v:224$26'.
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+ERROR: Multiple edge sensitive events found for this signal!
