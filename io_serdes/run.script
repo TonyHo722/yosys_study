@@ -1,0 +1,5 @@
+read_verilog fsic_coreclk_phase_cnt.v
+read_verilog fsic_io_serdes_rx.v
+read_verilog io_serdes.v
+hierarchy -check -top IO_SERDES
+proc; opt; fsm; opt; memory; opt
