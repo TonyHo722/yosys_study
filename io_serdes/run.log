@@ -129,60 +129,64 @@ Removed 2 unused modules.
 Cleaned up 0 empty switches.
 
 5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:447$102 in module IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:345$100 in module IO_SERDES.
-Marked 1 switch rules as full_case in process $proc$io_serdes.v:274$88 in module IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:241$83 in module IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:223$80 in module IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:205$75 in module IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:156$69 in module IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:72$171 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:61$169 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:49$167 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:37$164 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:165$161 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:148$157 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:134$154 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:120$151 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:102$147 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:87$144 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:75$142 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:64$138 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:48$132 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$io_serdes.v:454$99 in module IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:352$97 in module IO_SERDES.
+Marked 1 switch rules as full_case in process $proc$io_serdes.v:281$85 in module IO_SERDES.
+Marked 3 switch rules as full_case in process $proc$io_serdes.v:241$81 in module IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:223$78 in module IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:205$73 in module IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:156$67 in module IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:72$165 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:61$163 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:49$161 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:37$158 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:171$155 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:154$151 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:140$148 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:126$145 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:108$141 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:93$138 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:81$136 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:67$133 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:48$128 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
 Removed a total of 0 dead cases.
 
 5.3. Executing PROC_INIT pass (extract init attributes).
 
 5.4. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:345$100'.
-Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:274$88'.
-Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:223$80'.
-Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:205$75'.
-Found async reset \axi_reset_n in `\IO_SERDES.$proc$io_serdes.v:156$69'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$171'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:61$169'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$167'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:37$164'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:165$161'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:148$157'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:134$154'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:120$151'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:102$147'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:87$144'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:75$142'.
+Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:454$99'.
+Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:352$97'.
+Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:281$85'.
+Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:241$81'.
+Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:223$78'.
+Found async reset \axis_rst_n in `\IO_SERDES.$proc$io_serdes.v:205$73'.
+Found async reset \axi_reset_n in `\IO_SERDES.$proc$io_serdes.v:156$67'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$165'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:61$163'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$161'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:37$158'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$155'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$151'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$148'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$145'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$141'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$138'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$136'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$133'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$128'.
 
 5.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:447$102'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:454$99'.
      1/1: $0\is_as_tready_out[0:0]
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:345$100'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:352$97'.
      1/1: $0\rxen[0:0]
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:274$88'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:281$85'.
      1/5: $0\as_is_tlast_tvalid_tready_buf[3:0]
      2/5: $0\as_is_tid_tuser_buf[3:0]
      3/5: $0\as_is_tkeep_buf[3:0]
      4/5: $0\as_is_tstrb_buf[3:0]
      5/5: $0\as_is_tdata_buf[31:0]
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:241$83'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:241$81'.
      1/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [3]
      2/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [0]
      3/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [1]
@@ -192,51 +196,413 @@ Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:241$83'.
      7/9: $0\pre_as_is_tstrb_buf[3:0]
      8/9: $0\pre_as_is_tdata_buf[31:0]
      9/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [2]
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:223$80'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:223$78'.
      1/1: $0\tx_shift_phase_cnt[1:0]
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:205$75'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:205$73'.
      1/1: $0\txen[0:0]
-Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:156$69'.
+Creating decoders for process `\IO_SERDES.$proc$io_serdes.v:156$67'.
      1/2: $0\txen_ctl[0:0]
      2/2: $0\rxen_ctl[0:0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$171'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$165'.
      1/1: $0\phase_cnt[1:0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:61$169'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:61$163'.
      1/2: $0\clk_seq[3:0] [3:1]
      2/2: $0\clk_seq[3:0] [0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$167'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$161'.
      1/2: $0\sync_core_clk_toggle[0:0]
      2/2: $0\pre_core_clk_toggle[0:0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:37$164'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:37$158'.
      1/1: $0\core_clk_toggle[0:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:165$161'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$155'.
      1/2: $0\rx_sync_fifo_valid[0:0]
      2/2: $0\rx_sync_fifo[3:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:148$157'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$151'.
      1/2: $0\rx_start_delay[2:0] [2:1]
      2/2: $0\rx_start_delay[2:0] [0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:134$154'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$148'.
      1/1: $0\rx_shift_phase_cnt[1:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:120$151'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$145'.
      1/2: $0\rx_shift_reg[3:0] [3]
      2/2: $0\rx_shift_reg[3:0] [2:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:102$147'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$141'.
      1/1: $0\r_ptr[2:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:87$144'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$138'.
      1/1: $0\rx_start[0:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:75$142'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$136'.
      1/2: $0\w_ptr_sync[0:0]
      2/2: $0\w_ptr_pre[0:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:64$138'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$133'.
      1/5: $0\RxFifo[4:0] [4]
      2/5: $0\RxFifo[4:0] [3]
      3/5: $0\RxFifo[4:0] [2]
      4/5: $0\RxFifo[4:0] [1]
      5/5: $0\RxFifo[4:0] [0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$132'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$128'.
      1/1: $0\w_ptr[2:0]
 
 5.6. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 5.7. Executing PROC_DFF pass (convert process syncs to FFs).
-ERROR: Multiple edge sensitive events found for this signal!
+Creating register for signal `\IO_SERDES.\is_as_tready_out' using process `\IO_SERDES.$proc$io_serdes.v:454$99'.
+  created $adff cell `$procdff$302' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\rxen' using process `\IO_SERDES.$proc$io_serdes.v:352$97'.
+  created $adff cell `$procdff$303' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\as_is_tdata_buf' using process `\IO_SERDES.$proc$io_serdes.v:281$85'.
+  created $adff cell `$procdff$304' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\as_is_tstrb_buf' using process `\IO_SERDES.$proc$io_serdes.v:281$85'.
+  created $adff cell `$procdff$305' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\as_is_tkeep_buf' using process `\IO_SERDES.$proc$io_serdes.v:281$85'.
+  created $adff cell `$procdff$306' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\as_is_tid_tuser_buf' using process `\IO_SERDES.$proc$io_serdes.v:281$85'.
+  created $adff cell `$procdff$307' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\as_is_tlast_tvalid_tready_buf' using process `\IO_SERDES.$proc$io_serdes.v:281$85'.
+  created $adff cell `$procdff$308' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\pre_as_is_tdata_buf' using process `\IO_SERDES.$proc$io_serdes.v:241$81'.
+  created $adff cell `$procdff$309' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\pre_as_is_tstrb_buf' using process `\IO_SERDES.$proc$io_serdes.v:241$81'.
+  created $adff cell `$procdff$310' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\pre_as_is_tkeep_buf' using process `\IO_SERDES.$proc$io_serdes.v:241$81'.
+  created $adff cell `$procdff$311' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\pre_as_is_tid_tuser_buf' using process `\IO_SERDES.$proc$io_serdes.v:241$81'.
+  created $adff cell `$procdff$312' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\pre_as_is_tlast_tvalid_tready_buf' using process `\IO_SERDES.$proc$io_serdes.v:241$81'.
+  created $adff cell `$procdff$313' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\tx_shift_phase_cnt' using process `\IO_SERDES.$proc$io_serdes.v:223$78'.
+  created $adff cell `$procdff$314' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\txen' using process `\IO_SERDES.$proc$io_serdes.v:205$73'.
+  created $adff cell `$procdff$315' with negative edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\rxen_ctl' using process `\IO_SERDES.$proc$io_serdes.v:156$67'.
+  created $adff cell `$procdff$316' with positive edge clock and negative level reset.
+Creating register for signal `\IO_SERDES.\txen_ctl' using process `\IO_SERDES.$proc$io_serdes.v:156$67'.
+  created $adff cell `$procdff$317' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\phase_cnt' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$165'.
+  created $adff cell `$procdff$318' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\clk_seq' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:61$163'.
+  created $adff cell `$procdff$319' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\pre_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$161'.
+  created $adff cell `$procdff$320' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\sync_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$161'.
+  created $adff cell `$procdff$321' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:37$158'.
+  created $adff cell `$procdff$322' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$155'.
+  created $adff cell `$procdff$323' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo_valid' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$155'.
+  created $adff cell `$procdff$324' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start_delay' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$151'.
+  created $adff cell `$procdff$325' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_phase_cnt' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$148'.
+  created $adff cell `$procdff$326' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_reg' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$145'.
+  created $adff cell `$procdff$327' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\r_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$141'.
+  created $adff cell `$procdff$328' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$138'.
+  created $adff cell `$procdff$329' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_pre' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$136'.
+  created $adff cell `$procdff$330' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_sync' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$136'.
+  created $adff cell `$procdff$331' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\RxFifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$133'.
+  created $adff cell `$procdff$332' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$128'.
+  created $adff cell `$procdff$333' with negative edge clock and negative level reset.
+
+5.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\IO_SERDES.$proc$io_serdes.v:454$99'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:454$99'.
+Found and cleaned up 1 empty switch in `\IO_SERDES.$proc$io_serdes.v:352$97'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:352$97'.
+Found and cleaned up 1 empty switch in `\IO_SERDES.$proc$io_serdes.v:281$85'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:281$85'.
+Found and cleaned up 2 empty switches in `\IO_SERDES.$proc$io_serdes.v:241$81'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:241$81'.
+Found and cleaned up 1 empty switch in `\IO_SERDES.$proc$io_serdes.v:223$78'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:223$78'.
+Found and cleaned up 1 empty switch in `\IO_SERDES.$proc$io_serdes.v:205$73'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:205$73'.
+Found and cleaned up 2 empty switches in `\IO_SERDES.$proc$io_serdes.v:156$67'.
+Removing empty process `IO_SERDES.$proc$io_serdes.v:156$67'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$165'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:72$165'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:61$163'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:49$161'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:37$158'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$155'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$155'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$151'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$148'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$148'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$145'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$145'.
+Found and cleaned up 2 empty switches in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$141'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$141'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$138'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$138'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$136'.
+Found and cleaned up 2 empty switches in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$133'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$133'.
+Found and cleaned up 2 empty switches in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$128'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$128'.
+Cleaned up 21 empty switches.
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module IO_SERDES.
+<suppressed ~15 debug messages>
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+<suppressed ~8 debug messages>
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IO_SERDES'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+<suppressed ~30 debug messages>
+Removed a total of 21 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \IO_SERDES.
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\IO_SERDES'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Removed a total of 1 cells.
+
+6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \IO_SERDES..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Removed 8 unused cells and 131 unused wires.
+<suppressed ~12 debug messages>
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module IO_SERDES.
+
+6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \IO_SERDES.
+Performed a total of 0 changes.
+
+6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\IO_SERDES'.
+Removed a total of 0 cells.
+
+6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \IO_SERDES..
+
+6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module IO_SERDES.
+
+6.16. Finished OPT passes. (There is nothing left to do.)
+
+7. Executing FSM pass (extract and optimize FSM).
+
+7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \IO_SERDES..
+
+7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module IO_SERDES.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\IO_SERDES'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \IO_SERDES.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\IO_SERDES'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \IO_SERDES..
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module IO_SERDES.
+
+8.9. Finished OPT passes. (There is nothing left to do.)
+
+9. Executing MEMORY pass.
+
+9.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+9.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \IO_SERDES..
+
+9.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \IO_SERDES..
+
+9.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.6. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module IO_SERDES.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\IO_SERDES'.
+Removed a total of 0 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~35 debug messages>
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \IO_SERDES.
+Performed a total of 0 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\IO_SERDES'.
+Removed a total of 0 cells.
+
+10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \IO_SERDES..
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module IO_SERDES.
+
+10.9. Finished OPT passes. (There is nothing left to do.)
+
+End of script. Logfile hash: 45f48fb314
+CPU: user 0.09s system 0.00s, MEM: 16.97 MB total, 11.45 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 24% 7x opt_clean (0 sec), 15% 7x opt_expr (0 sec), ...
