@@ -7,7 +7,7 @@ read_verilog fsic.vo
 read_verilog io_serdes.v
 read_verilog logic_anlz.dummy_io.vd
 read_verilog mprj_io.sv
-read_verilog sw_caravel.v
+read_verilog sw_caravel.v.patch
 read_verilog user_subsys.all.v
 
 hierarchy -check -top FSIC

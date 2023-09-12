@@ -69,10 +69,9 @@ Parsing Verilog input from `mprj_io.sv' to AST representation.
 Generating RTLIL representation for module `\MPRJ_IO'.
 Successfully finished Verilog frontend.
 
-10. Executing Verilog-2005 frontend: sw_caravel.v
-Parsing Verilog input from `sw_caravel.v' to AST representation.
+10. Executing Verilog-2005 frontend: sw_caravel.v.patch
+Parsing Verilog input from `sw_caravel.v.patch' to AST representation.
 Generating RTLIL representation for module `\AXIS_SW'.
-Warning: Replacing memory \mem with list of registers. See sw_caravel.v:393
 Successfully finished Verilog frontend.
 
 11. Executing Verilog-2005 frontend: user_subsys.all.v
@@ -134,7 +133,6 @@ Generating RTLIL representation for module `$paramod$461f3488c8f711562303248cdba
 Parameter \pADDR_WIDTH = 12
 Parameter \pDATA_WIDTH = 32
 Generating RTLIL representation for module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
-Warning: Replacing memory \mem with list of registers. See sw_caravel.v:393
 
 12.7. Executing AST frontend in derive mode using pre-parsed AST for module `\AXIL_AXIS'.
 Parameter \pADDR_WIDTH = 12
@@ -443,199 +441,166 @@ Warning: Resizing cell port FSIC.U_IO_SERDES0.axi_awaddr from 15 bits to 12 bits
 Cleaned up 0 empty switches.
 
 13.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 2 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:71$804 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:60$802 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:48$800 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:36$797 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:171$794 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:154$790 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:140$787 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:126$784 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:108$780 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:93$777 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:81$775 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:67$772 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:48$767 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
-Marked 2 switch rules as full_case in process $proc$config_ctrl.v:558$746 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
-Marked 10 switch rules as full_case in process $proc$config_ctrl.v:440$740 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
-Marked 2 switch rules as full_case in process $proc$config_ctrl.v:413$737 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
-Marked 2 switch rules as full_case in process $proc$config_ctrl.v:333$734 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
-Marked 3 switch rules as full_case in process $proc$config_ctrl.v:279$730 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
-Marked 1 switch rules as full_case in process $proc$config_ctrl.v:254$712 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
-Removed 1 dead cases from process $proc$sw_caravel.v:20$604 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 1 switch rules as full_case in process $proc$sw_caravel.v:20$604 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Removed 1 dead cases from process $proc$sw_caravel.v:20$601 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 1 switch rules as full_case in process $proc$sw_caravel.v:20$601 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 5 switch rules as full_case in process $proc$sw_caravel.v:401$557 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 2 switch rules as full_case in process $proc$sw_caravel.v:391$550 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 7 switch rules as full_case in process $proc$sw_caravel.v:294$531 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Removed 2 dead cases from process $proc$sw_caravel.v:262$520 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 8 switch rules as full_case in process $proc$sw_caravel.v:262$520 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 8 switch rules as full_case in process $proc$sw_caravel.v:245$517 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Removed 2 dead cases from process $proc$sw_caravel.v:224$514 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 4 switch rules as full_case in process $proc$sw_caravel.v:224$514 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 2 switch rules as full_case in process $proc$sw_caravel.v:186$500 in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
-Marked 3 switch rules as full_case in process $proc$io_serdes.v:454$461 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:352$459 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
-Marked 1 switch rules as full_case in process $proc$io_serdes.v:281$447 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
-Marked 3 switch rules as full_case in process $proc$io_serdes.v:241$443 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:223$440 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:205$435 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
-Marked 2 switch rules as full_case in process $proc$io_serdes.v:156$429 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:71$606 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:60$604 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:48$602 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_coreclk_phase_cnt.v:36$599 in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:171$596 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:154$592 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:140$589 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:126$586 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:108$582 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:93$579 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 1 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:81$577 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:67$574 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 3 switch rules as full_case in process $proc$fsic_io_serdes_rx.v:48$569 in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:558$548 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 10 switch rules as full_case in process $proc$config_ctrl.v:440$542 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:413$539 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:333$536 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 3 switch rules as full_case in process $proc$config_ctrl.v:279$532 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 1 switch rules as full_case in process $proc$config_ctrl.v:254$514 in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Marked 3 switch rules as full_case in process $proc$io_serdes.v:454$362 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:352$360 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 1 switch rules as full_case in process $proc$io_serdes.v:281$348 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 3 switch rules as full_case in process $proc$io_serdes.v:241$344 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:223$341 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:205$336 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Marked 2 switch rules as full_case in process $proc$io_serdes.v:156$330 in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
 Marked 1 switch rules as full_case in process $proc$fsic_clkrst.v:60$153 in module FSIC_CLKRST.
 Marked 1 switch rules as full_case in process $proc$fsic_clkrst.v:48$152 in module FSIC_CLKRST.
 Marked 1 switch rules as full_case in process $proc$fsic_clkrst.v:36$151 in module FSIC_CLKRST.
-Removed a total of 6 dead cases.
+Removed a total of 0 dead cases.
 
 13.3. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$765'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$567'.
   Set init value: \axi_rready_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$764'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$566'.
   Set init value: \axi_araddr_o = 15'000000000000000
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$763'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$565'.
   Set init value: \axi_arvalid_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$762'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$564'.
   Set init value: \axi_wstrb_o = 4'0000
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$761'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$563'.
   Set init value: \axi_wdata_o = 0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$760'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$562'.
   Set init value: \axi_wvalid_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$759'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$561'.
   Set init value: \axi_awaddr_o = 15'000000000000000
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$758'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$560'.
   Set init value: \axi_awvalid_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$757'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$559'.
   Set init value: \aa_cfg_arready_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$756'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$558'.
   Set init value: \aa_cfg_wready_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$755'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$557'.
   Set init value: \aa_cfg_awready_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$754'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$556'.
   Set init value: \aa_cfg_rvalid_o = 1'0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$753'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$555'.
   Set init value: \aa_cfg_rdata_o = 0
-Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$752'.
+Found init rule in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$554'.
   Set init value: \axi_grant_o_reg = 1'0
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:155$615'.
-  Set init value: \pre_rd_ptr_reg = 5'00000
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:154$614'.
-  Set init value: \rd_ptr_reg = 5'00000
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:153$613'.
-  Set init value: \wr_ptr_reg = 5'00000
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:148$612'.
-  Set init value: \m_axis_tvalid_reg = 1'0
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:142$611'.
-  Set init value: \frame_start_reg = 1'0
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$610'.
-  Set init value: \shift_hi_grant = 3'000
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$609'.
-  Set init value: \shift_grant = 3'000
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$608'.
-  Set init value: \grant_reg = 3'000
-Found init rule in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:132$607'.
-  Set init value: \TH_reg = 4'0101
 
 13.4. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$804'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$802'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
-Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$797'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$790'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$787'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$784'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$780'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$777'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$772'.
-Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$767'.
-Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$746'.
-Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-Found async reset \wb_rst in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$737'.
-Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-Found async reset \wb_rst in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
-Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$712'.
-Found async reset \axi_reset_n in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:294$531'.
-Found async reset \axi_reset_n in `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:186$500'.
-Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$461'.
-Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$459'.
-Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$447'.
-Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$443'.
-Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$440'.
-Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$435'.
-Found async reset \axi_reset_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$429'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$606'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$604'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$602'.
+Found async reset \axis_rst_n in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$599'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$596'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$592'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$589'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$586'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$582'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$579'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$577'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$574'.
+Found async reset \axis_rst_n in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$569'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$548'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+Found async reset \wb_rst in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$539'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+Found async reset \wb_rst in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+Found async reset \axi_reset_n in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$362'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$360'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$341'.
+Found async reset \axis_rst_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$336'.
+Found async reset \axi_reset_n in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$330'.
 Found async reset \wb_rst in `\FSIC_CLKRST.$proc$fsic_clkrst.v:60$153'.
 Found async reset \wb_rst in `\FSIC_CLKRST.$proc$fsic_clkrst.v:48$152'.
 Found async reset \wb_rst in `\FSIC_CLKRST.$proc$fsic_clkrst.v:36$151'.
 
 13.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$804'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$606'.
      1/1: $0\phase_cnt[1:0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$802'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$604'.
      1/2: $0\clk_seq[3:0] [3:1]
      2/2: $0\clk_seq[3:0] [0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$602'.
      1/2: $0\sync_core_clk_toggle[0:0]
      2/2: $0\pre_core_clk_toggle[0:0]
-Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$797'.
+Creating decoders for process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$599'.
      1/1: $0\core_clk_toggle[0:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$596'.
      1/2: $0\rx_sync_fifo_valid[0:0]
      2/2: $0\rx_sync_fifo[3:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$790'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$592'.
      1/2: $0\rx_start_delay[2:0] [2:1]
      2/2: $0\rx_start_delay[2:0] [0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$787'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$589'.
      1/1: $0\rx_shift_phase_cnt[1:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$784'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$586'.
      1/2: $0\rx_shift_reg[3:0] [3]
      2/2: $0\rx_shift_reg[3:0] [2:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$780'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$582'.
      1/1: $0\r_ptr[2:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$777'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$579'.
      1/1: $0\rx_start[0:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$577'.
      1/2: $0\w_ptr_sync[0:0]
      2/2: $0\w_ptr_pre[0:0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$772'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$574'.
      1/5: $0\RxFifo[4:0] [4]
      2/5: $0\RxFifo[4:0] [3]
      3/5: $0\RxFifo[4:0] [2]
      4/5: $0\RxFifo[4:0] [1]
      5/5: $0\RxFifo[4:0] [0]
-Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$767'.
+Creating decoders for process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$569'.
      1/1: $0\w_ptr[2:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$765'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$567'.
      1/1: $1\axi_rready_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$764'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$566'.
      1/1: $1\axi_araddr_o[14:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$763'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$565'.
      1/1: $1\axi_arvalid_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$762'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$564'.
      1/1: $1\axi_wstrb_o[3:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$761'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$563'.
      1/1: $1\axi_wdata_o[31:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$760'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$562'.
      1/1: $1\axi_wvalid_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$759'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$561'.
      1/1: $1\axi_awaddr_o[14:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$758'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$560'.
      1/1: $1\axi_awvalid_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$757'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$559'.
      1/1: $1\aa_cfg_arready_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$756'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$558'.
      1/1: $1\aa_cfg_wready_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$755'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$557'.
      1/1: $1\aa_cfg_awready_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$754'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$556'.
      1/1: $1\aa_cfg_rvalid_o[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$753'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$555'.
      1/1: $1\aa_cfg_rdata_o[31:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$752'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$554'.
      1/1: $1\axi_grant_o_reg[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$746'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$548'.
      1/1: $0\user_prj_sel_o[4:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
      1/13: $0\axi_rready_o[0:0]
      2/13: $0\axi_araddr_o[14:0]
      3/13: $0\axi_arvalid_o[0:0]
@@ -649,9 +614,9 @@ Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$
     11/13: $0\f_axi_request_done[0:0]
     12/13: $0\wb_axi_rdata[31:0]
     13/13: $0\wb_axi_request_done[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$737'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$539'.
      1/1: $0\axi_grant_o_reg[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
      1/11: $0\aa_cfg_arready_o[0:0]
      2/11: $0\aa_cfg_wready_o[0:0]
      3/11: $0\aa_cfg_awready_o[0:0]
@@ -663,7 +628,7 @@ Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$
      9/11: $0\f_axi_request_rw[0:0]
     10/11: $0\f_axi_request[0:0]
     11/11: $0\f_axi_fsm_reg[2:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
      1/8: $0\wbs_rdata_o[31:0]
      2/8: $0\wbs_ack_o[0:0]
      3/8: $0\wb_axi_wdata[31:0]
@@ -672,7 +637,7 @@ Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$
      6/8: $0\wb_axi_request_rw[0:0]
      7/8: $0\wb_axi_request[0:0]
      8/8: $0\wb_fsm_reg[0:0]
-Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$712'.
+Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
      1/7: $0\cc_up_enable_o[0:0]
      2/7: $0\cc_la_enable_o[0:0]
      3/7: $0\cc_is_enable_o[0:0]
@@ -680,166 +645,115 @@ Creating decoders for process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$
      5/7: $0\cc_aa_enable_o[0:0]
      6/7: $0\cc_sub_enable[0:0]
      7/7: $0\cc_enable[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$636'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$438'.
      1/1: $0\mb_irq[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$635'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$437'.
      1/1: $0\aa_as_tuser[1:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$634'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$436'.
      1/1: $0\aa_as_tvalid[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$633'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$435'.
      1/1: $0\aa_as_tlast[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$632'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$434'.
      1/1: $0\aa_as_tkeep[3:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$631'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$433'.
      1/1: $0\aa_as_tstrb[3:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$630'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$432'.
      1/1: $0\aa_as_tdata[31:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$629'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$431'.
      1/1: $0\aa_as_tready[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$628'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$430'.
      1/1: $0\s_arready[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$627'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$429'.
      1/1: $0\s_wready[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$626'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$428'.
      1/1: $0\s_awready[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$625'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$427'.
      1/1: $0\s_rvalid[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$624'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$426'.
      1/1: $0\s_rdata[31:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$623'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$425'.
      1/1: $0\m_rready[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$622'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$424'.
      1/1: $0\m_araddr[31:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$621'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$423'.
      1/1: $0\m_arvalid[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$620'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$422'.
      1/1: $0\m_wstrb[3:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$619'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$421'.
      1/1: $0\m_wdata[31:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$618'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$420'.
      1/1: $0\m_wvalid[0:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$617'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$419'.
      1/1: $0\m_awaddr[31:0]
-Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$616'.
+Creating decoders for process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$418'.
      1/1: $0\m_awvalid[0:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:155$615'.
-     1/1: $1\pre_rd_ptr_reg[4:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:154$614'.
-     1/1: $1\rd_ptr_reg[4:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:153$613'.
-     1/1: $1\wr_ptr_reg[4:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:148$612'.
-     1/1: $1\m_axis_tvalid_reg[0:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:142$611'.
-     1/1: $1\frame_start_reg[0:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$610'.
-     1/1: $4\shift_hi_grant[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$609'.
-     1/1: $4\shift_grant[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:141$608'.
-     1/1: $1\grant_reg[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:132$607'.
-     1/1: $1\TH_reg[3:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$604'.
-     1/2: $1$mem2reg_rd$\mem$sw_caravel.v:173$490_DATA[44:0]$606
-     2/2: $0$mem2reg_rd$\mem$sw_caravel.v:173$490_DATA[44:0]$605
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$601'.
-     1/2: $1$mem2reg_rd$\mem$sw_caravel.v:172$489_DATA[44:0]$603
-     2/2: $0$mem2reg_rd$\mem$sw_caravel.v:172$489_DATA[44:0]$602
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:401$557'.
-     1/6: $0\as_is_tready_reg[0:0]
-     2/6: $0\delaynext[0:0]
-     3/6: $0\as_aa_tvalid_reg[0:0]
-     4/6: $0\as_up_tvalid_reg[0:0]
-     5/6: $0\pre_rd_ptr_reg[4:0]
-     6/6: $0\rd_ptr_reg[4:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:391$550'.
-     1/21: $1$mem2reg_wr$\mem$sw_caravel.v:393$491_ADDR[3:0]$554
-     2/21: $1$mem2reg_wr$\mem$sw_caravel.v:393$491_DATA[44:0]$553
-     3/21: $0$mem2reg_wr$\mem$sw_caravel.v:393$491_ADDR[3:0]$552
-     4/21: $0$mem2reg_wr$\mem$sw_caravel.v:393$491_DATA[44:0]$551
-     5/21: $0\mem[15][44:0]
-     6/21: $0\mem[14][44:0]
-     7/21: $0\mem[13][44:0]
-     8/21: $0\mem[12][44:0]
-     9/21: $0\mem[11][44:0]
-    10/21: $0\mem[10][44:0]
-    11/21: $0\mem[9][44:0]
-    12/21: $0\mem[8][44:0]
-    13/21: $0\mem[7][44:0]
-    14/21: $0\mem[6][44:0]
-    15/21: $0\mem[5][44:0]
-    16/21: $0\mem[4][44:0]
-    17/21: $0\mem[3][44:0]
-    18/21: $0\mem[2][44:0]
-    19/21: $0\mem[1][44:0]
-    20/21: $0\mem[0][44:0]
-    21/21: $0\wr_ptr_reg[4:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:294$531'.
-     1/13: $0\hi_req_flag[2:0] [2]
-     2/13: $0\hi_req_flag[2:0] [1]
-     3/13: $0\hi_req_flag[2:0] [0]
-     4/13: $0\m_axis_tuser_reg[1:0]
-     5/13: $0\m_axis_tvalid_reg[0:0]
-     6/13: $0\m_axis_tlast_reg[0:0]
-     7/13: $0\m_axis_tkeep_reg[3:0]
-     8/13: $0\m_axis_tstrb_reg[3:0]
-     9/13: $0\m_axis_tdata_reg[31:0]
-    10/13: $0\m_axis_tid_reg[1:0]
-    11/13: $0\frame_start_reg[0:0]
-    12/13: $0\base_ptr[1:0]
-    13/13: $0\grant_reg[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:262$520'.
-     1/11: $5\grant_next[2:0]
-     2/11: $4\frame_start_next[0:0]
-     3/11: $3\frame_start_next[0:0]
-     4/11: $2\frame_start_next[0:0]
-     5/11: $4\grant_next[2:0]
-     6/11: $3\grant_next[2:0]
-     7/11: $2\grant_next[2:0]
-     8/11: $1\frame_start_next[0:0]
-     9/11: $1\grant_next[2:0]
-    10/11: $0\frame_start_next[0:0]
-    11/11: $0\grant_next[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:245$517'.
-     1/16: $5\shift_grant[2:2]
-     2/16: $4\shift_grant[2:1] [0]
-     3/16: $4\shift_grant[2:1] [1]
-     4/16: $3\shift_grant[2:0] [0]
-     5/16: $3\shift_grant[2:0] [2:1]
-     6/16: $5\shift_hi_grant[2:2]
-     7/16: $4\shift_hi_grant[2:1] [0]
-     8/16: $4\shift_hi_grant[2:1] [1]
-     9/16: $3\shift_hi_grant[2:0] [0]
-    10/16: $3\shift_hi_grant[2:0] [2:1]
-    11/16: $2\shift_hi_grant[2:0]
-    12/16: $2\shift_grant[2:0]
-    13/16: $1\shift_hi_grant[2:0]
-    14/16: $1\shift_grant[2:0]
-    15/16: $0\shift_hi_grant[2:0]
-    16/16: $0\shift_grant[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:224$514'.
-     1/8: $3\shift_req[2:0]
-     2/8: $3\shift_hi_req[2:0]
-     3/8: $2\shift_hi_req[2:0]
-     4/8: $2\shift_req[2:0]
-     5/8: $1\shift_hi_req[2:0]
-     6/8: $1\shift_req[2:0]
-     7/8: $0\shift_hi_req[2:0]
-     8/8: $0\shift_req[2:0]
-Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:186$500'.
-     1/1: $0\TH_reg[3:0]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$461'.
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:135$417'.
+     1/1: $0\as_aa_tuser[1:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:134$416'.
+     1/1: $0\as_aa_tvalid[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:133$415'.
+     1/1: $0\as_aa_tlast[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:132$414'.
+     1/1: $0\as_aa_tkeep[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:131$413'.
+     1/1: $0\as_aa_tstrb[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:130$412'.
+     1/1: $0\as_aa_tdata[31:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:129$411'.
+     1/1: $0\as_up_tuser[1:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:128$410'.
+     1/1: $0\as_up_tvalid[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:127$409'.
+     1/1: $0\as_up_tlast[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:126$408'.
+     1/1: $0\as_up_tkeep[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:125$407'.
+     1/1: $0\as_up_tstrb[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:124$406'.
+     1/1: $0\as_up_tdata[31:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:123$405'.
+     1/1: $0\as_is_tready[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:122$404'.
+     1/1: $0\as_is_tuser[1:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:121$403'.
+     1/1: $0\as_is_tvalid[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:120$402'.
+     1/1: $0\as_is_tid[1:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:119$401'.
+     1/1: $0\as_is_tlast[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:118$400'.
+     1/1: $0\as_is_tkeep[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:117$399'.
+     1/1: $0\as_is_tstrb[3:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:116$398'.
+     1/1: $0\as_is_tdata[31:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:115$397'.
+     1/1: $0\as_la_tready[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:114$396'.
+     1/1: $0\as_aa_tready[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:113$395'.
+     1/1: $0\as_up_tready[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:112$394'.
+     1/1: $0\axi_rdata[31:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:111$393'.
+     1/1: $0\axi_rvalid[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:110$392'.
+     1/1: $0\axi_arready[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:109$391'.
+     1/1: $0\axi_wready[0:0]
+Creating decoders for process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:108$390'.
+     1/1: $0\axi_awready[0:0]
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$362'.
      1/1: $0\is_as_tready_out[0:0]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$459'.
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$360'.
      1/1: $0\rxen[0:0]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$447'.
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
      1/5: $0\as_is_tlast_tvalid_tready_buf[3:0]
      2/5: $0\as_is_tid_tuser_buf[3:0]
      3/5: $0\as_is_tkeep_buf[3:0]
      4/5: $0\as_is_tstrb_buf[3:0]
      5/5: $0\as_is_tdata_buf[31:0]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$443'.
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
      1/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [3]
      2/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [0]
      3/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [1]
@@ -849,11 +763,11 @@ Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456
      7/9: $0\pre_as_is_tstrb_buf[3:0]
      8/9: $0\pre_as_is_tdata_buf[31:0]
      9/9: $0\pre_as_is_tlast_tvalid_tready_buf[3:0] [2]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$440'.
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$341'.
      1/1: $0\tx_shift_phase_cnt[1:0]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$435'.
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$336'.
      1/1: $0\txen[0:0]
-Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$429'.
+Creating decoders for process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$330'.
      1/2: $0\txen_ctl[0:0]
      2/2: $0\rxen_ctl[0:0]
 Creating decoders for process `\FSIC_CLKRST.$proc$fsic_clkrst.v:60$153'.
@@ -864,122 +778,1469 @@ Creating decoders for process `\FSIC_CLKRST.$proc$fsic_clkrst.v:36$151'.
      1/1: $0\axi_reset_nr[2:0]
 
 13.6. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\mb_irq' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$636'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tuser' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$635'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$634'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tlast' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$633'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tkeep' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$632'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tstrb' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$631'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$630'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$629'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_arready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$628'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_wready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$627'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_awready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$626'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_rvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$625'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_rdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$624'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_rready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$623'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_araddr' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$622'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_arvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$621'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wstrb' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$620'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$619'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$618'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_awaddr' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$617'.
-No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_awvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$616'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$mem2reg_rd$\mem$sw_caravel.v:173$490_DATA' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$604'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$mem2reg_rd$\mem$sw_caravel.v:172$489_DATA' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:20$601'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\grant_next' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:262$520'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\frame_start_next' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:262$520'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_grant' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:245$517'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_hi_grant' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:245$517'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_req' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:224$514'.
-No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\shift_hi_req' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v:224$514'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\mb_irq' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$438'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tuser' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$437'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$436'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tlast' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$435'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tkeep' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$434'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tstrb' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$433'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$432'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\aa_as_tready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$431'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_arready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$430'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_wready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$429'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_awready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$428'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_rvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$427'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\s_rdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$426'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_rready' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$425'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_araddr' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$424'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_arvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$423'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wstrb' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$422'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wdata' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$421'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_wvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$420'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_awaddr' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$419'.
+No latch inferred for signal `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.\m_awvalid' from process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$418'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tuser' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:135$417'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tvalid' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:134$416'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tlast' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:133$415'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tkeep' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:132$414'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tstrb' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:131$413'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tdata' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:130$412'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tuser' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:129$411'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tvalid' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:128$410'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tlast' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:127$409'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tkeep' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:126$408'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tstrb' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:125$407'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tdata' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:124$406'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:123$405'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tuser' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:122$404'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tvalid' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:121$403'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tid' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:120$402'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tlast' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:119$401'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tkeep' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:118$400'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tstrb' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:117$399'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_is_tdata' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:116$398'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_la_tready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:115$397'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_aa_tready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:114$396'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\as_up_tready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:113$395'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\axi_rdata' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:112$394'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\axi_rvalid' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:111$393'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\axi_arready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:110$392'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\axi_wready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:109$391'.
+No latch inferred for signal `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.\axi_awready' from process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:108$390'.
 
 13.7. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\phase_cnt' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$804'.
-  created $adff cell `$procdff$2014' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\clk_seq' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$802'.
-  created $adff cell `$procdff$2015' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\pre_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
-  created $adff cell `$procdff$2016' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\sync_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$800'.
-  created $adff cell `$procdff$2017' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$797'.
-  created $adff cell `$procdff$2018' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
-  created $adff cell `$procdff$2019' with negative edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo_valid' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$794'.
-  created $adff cell `$procdff$2020' with negative edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start_delay' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$790'.
-  created $adff cell `$procdff$2021' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_phase_cnt' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$787'.
-  created $adff cell `$procdff$2022' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_reg' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$784'.
-  created $adff cell `$procdff$2023' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\r_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$780'.
-  created $adff cell `$procdff$2024' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$777'.
-  created $adff cell `$procdff$2025' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_pre' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
-  created $adff cell `$procdff$2026' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_sync' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$775'.
-  created $adff cell `$procdff$2027' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\RxFifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$772'.
-  created $adff cell `$procdff$2028' with negative edge clock and negative level reset.
-Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$767'.
-  created $adff cell `$procdff$2029' with negative edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\user_prj_sel_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$746'.
-  created $adff cell `$procdff$2030' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request_done' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2031' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_rdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2032' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_done' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2033' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_rdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2034' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\m_axi_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2035' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_awvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2036' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_awaddr_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2037' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2038' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2039' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wstrb_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2040' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_arvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2041' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_araddr_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2042' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_rready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$740'.
-  created $adff cell `$procdff$2043' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_grant_o_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$737'.
-  created $adff cell `$procdff$2044' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2045' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2046' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_rw' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2047' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_wstrb' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2048' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_add' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2049' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_wdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2050' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_rdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2051' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_rvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2052' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_awready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2053' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_wready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2054' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_arready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$734'.
-  created $adff cell `$procdff$2055' with positive edge clock and negative level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
-  created $adff cell `$procdff$2056' with positive edge clock and positive level reset.
-Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$730'.
-  created $adff cell `$prERROR: Multiple edge sensitive events found for this signal!
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\phase_cnt' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$606'.
+  created $adff cell `$procdff$1170' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\clk_seq' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$604'.
+  created $adff cell `$procdff$1171' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\pre_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$602'.
+  created $adff cell `$procdff$1172' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\sync_core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$602'.
+  created $adff cell `$procdff$1173' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.\core_clk_toggle' using process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$599'.
+  created $adff cell `$procdff$1174' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$596'.
+  created $adff cell `$procdff$1175' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_sync_fifo_valid' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$596'.
+  created $adff cell `$procdff$1176' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start_delay' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$592'.
+  created $adff cell `$procdff$1177' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_phase_cnt' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$589'.
+  created $adff cell `$procdff$1178' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_shift_reg' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$586'.
+  created $adff cell `$procdff$1179' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\r_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$582'.
+  created $adff cell `$procdff$1180' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\rx_start' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$579'.
+  created $adff cell `$procdff$1181' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_pre' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$577'.
+  created $adff cell `$procdff$1182' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr_sync' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$577'.
+  created $adff cell `$procdff$1183' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\RxFifo' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$574'.
+  created $adff cell `$procdff$1184' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.\w_ptr' using process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$569'.
+  created $adff cell `$procdff$1185' with negative edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\user_prj_sel_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$548'.
+  created $adff cell `$procdff$1186' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request_done' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1187' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_rdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1188' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_done' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1189' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_rdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1190' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\m_axi_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1191' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_awvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1192' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_awaddr_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1193' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1194' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1195' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_wstrb_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1196' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_arvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1197' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_araddr_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1198' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_rready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+  created $adff cell `$procdff$1199' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\axi_grant_o_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$539'.
+  created $adff cell `$procdff$1200' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1201' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1202' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_rw' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1203' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_wstrb' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1204' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_request_add' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1205' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\f_axi_wdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1206' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_rdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1207' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_rvalid_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1208' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_awready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1209' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_wready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1210' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\aa_cfg_arready_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+  created $adff cell `$procdff$1211' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_fsm_reg' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1212' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1213' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request_rw' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1214' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_wstrb' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1215' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_request_add' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1216' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wb_axi_wdata' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1217' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wbs_ack_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1218' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\wbs_rdata_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+  created $adff cell `$procdff$1219' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_enable' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1220' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_sub_enable' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1221' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_aa_enable_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1222' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_as_enable_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1223' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_is_enable_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1224' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_la_enable_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1225' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.\cc_up_enable_o' using process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+  created $adff cell `$procdff$1226' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\is_as_tready_out' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$362'.
+  created $adff cell `$procdff$1227' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\rxen' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$360'.
+  created $adff cell `$procdff$1228' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\as_is_tdata_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+  created $adff cell `$procdff$1229' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\as_is_tstrb_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+  created $adff cell `$procdff$1230' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\as_is_tkeep_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+  created $adff cell `$procdff$1231' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\as_is_tid_tuser_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+  created $adff cell `$procdff$1232' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\as_is_tlast_tvalid_tready_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+  created $adff cell `$procdff$1233' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\pre_as_is_tdata_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+  created $adff cell `$procdff$1234' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\pre_as_is_tstrb_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+  created $adff cell `$procdff$1235' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\pre_as_is_tkeep_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+  created $adff cell `$procdff$1236' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\pre_as_is_tid_tuser_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+  created $adff cell `$procdff$1237' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\pre_as_is_tlast_tvalid_tready_buf' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+  created $adff cell `$procdff$1238' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\tx_shift_phase_cnt' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$341'.
+  created $adff cell `$procdff$1239' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\txen' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$336'.
+  created $adff cell `$procdff$1240' with negative edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\rxen_ctl' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$330'.
+  created $adff cell `$procdff$1241' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.\txen_ctl' using process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$330'.
+  created $adff cell `$procdff$1242' with positive edge clock and negative level reset.
+Creating register for signal `\FSIC_CLKRST.\uck2_rst_nr' using process `\FSIC_CLKRST.$proc$fsic_clkrst.v:60$153'.
+  created $adff cell `$procdff$1243' with positive edge clock and positive level reset.
+Creating register for signal `\FSIC_CLKRST.\axis_rst_nr' using process `\FSIC_CLKRST.$proc$fsic_clkrst.v:48$152'.
+  created $adff cell `$procdff$1244' with positive edge clock and positive level reset.
+Creating register for signal `\FSIC_CLKRST.\axi_reset_nr' using process `\FSIC_CLKRST.$proc$fsic_clkrst.v:36$151'.
+  created $adff cell `$procdff$1245' with positive edge clock and positive level reset.
+
+13.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$606'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:71$606'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:60$604'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:48$602'.
+Removing empty process `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.$proc$fsic_coreclk_phase_cnt.v:36$599'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$596'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:171$596'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:154$592'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$589'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:140$589'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$586'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:126$586'.
+Found and cleaned up 2 empty switches in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$582'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:108$582'.
+Found and cleaned up 1 empty switch in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$579'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:93$579'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:81$577'.
+Found and cleaned up 2 empty switches in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$574'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:67$574'.
+Found and cleaned up 2 empty switches in `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$569'.
+Removing empty process `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.$proc$fsic_io_serdes_rx.v:48$569'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:163$567'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:162$566'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:161$565'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:160$564'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:159$563'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:158$562'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:157$561'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:156$560'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:154$559'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:153$558'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:152$557'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:151$556'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:150$555'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:116$554'.
+Found and cleaned up 2 empty switches in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$548'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:558$548'.
+Found and cleaned up 15 empty switches in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:440$542'.
+Found and cleaned up 5 empty switches in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$539'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:413$539'.
+Found and cleaned up 7 empty switches in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:333$536'.
+Found and cleaned up 6 empty switches in `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:279$532'.
+Removing empty process `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.$proc$config_ctrl.v:254$514'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:79$438'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:78$437'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:77$436'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:76$435'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:75$434'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:74$433'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:73$432'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:72$431'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:71$430'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:70$429'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:69$428'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:68$427'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:67$426'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:66$425'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:65$424'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:64$423'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:63$422'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:62$421'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:61$420'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:60$419'.
+Removing empty process `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$axil_axis.sv:59$418'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:135$417'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:134$416'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:133$415'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:132$414'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:131$413'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:130$412'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:129$411'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:128$410'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:127$409'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:126$408'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:125$407'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:124$406'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:123$405'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:122$404'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:121$403'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:120$402'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:119$401'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:118$400'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:117$399'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:116$398'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:115$397'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:114$396'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:113$395'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:112$394'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:111$393'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:110$392'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:109$391'.
+Removing empty process `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.$proc$sw_caravel.v.patch:108$390'.
+Found and cleaned up 2 empty switches in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$362'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:454$362'.
+Found and cleaned up 1 empty switch in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$360'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:352$360'.
+Found and cleaned up 1 empty switch in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:281$348'.
+Found and cleaned up 2 empty switches in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:241$344'.
+Found and cleaned up 1 empty switch in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$341'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:223$341'.
+Found and cleaned up 1 empty switch in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$336'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:205$336'.
+Found and cleaned up 2 empty switches in `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$330'.
+Removing empty process `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.$proc$io_serdes.v:156$330'.
+Removing empty process `FSIC_CLKRST.$proc$fsic_clkrst.v:60$153'.
+Removing empty process `FSIC_CLKRST.$proc$fsic_clkrst.v:48$152'.
+Removing empty process `FSIC_CLKRST.$proc$fsic_clkrst.v:36$151'.
+Cleaned up 56 empty switches.
+
+14. Executing OPT pass (performing simple optimizations).
+
+14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+<suppressed ~8 debug messages>
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+<suppressed ~43 debug messages>
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module FSIC.
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+<suppressed ~15 debug messages>
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module FSIC_CLKRST.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+
+14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+<suppressed ~198 debug messages>
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Removed a total of 87 cells.
+
+14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$918: \axi_grant_o_reg -> 1'0
+      Replacing known input bits on port B of cell $procmux$916: \axi_grant_o_reg -> 1'1
+      Replacing known input bits on port A of cell $procmux$914: \axi_grant_o_reg -> 1'1
+      Replacing known input bits on port B of cell $procmux$922: \axi_grant_o_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$920: \axi_grant_o_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$1098: \wb_fsm_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$1096: \wb_fsm_reg -> 1'1
+      Replacing known input bits on port B of cell $procmux$1102: \wb_fsm_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$1100: \wb_fsm_reg -> 1'0
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FSIC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FSIC_CLKRST..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~83 debug messages>
+
+14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+  Optimizing cells in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module \FSIC.
+  Optimizing cells in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+  Optimizing cells in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module \FSIC_CLKRST.
+  Optimizing cells in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Performed a total of 0 changes.
+
+14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Removed a total of 9 cells.
+
+14.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module \FSIC_CLKRST..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Removed 13 unused cells and 473 unused wires.
+<suppressed ~34 debug messages>
+
+14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \FSIC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FSIC_CLKRST..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~86 debug messages>
+
+14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+  Optimizing cells in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+  Optimizing cells in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \FSIC.
+  Optimizing cells in module \FSIC_CLKRST.
+Performed a total of 0 changes.
+
+14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Removed a total of 0 cells.
+
+14.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+
+14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+14.16. Finished OPT passes. (There is nothing left to do.)
+
+15. Executing FSM pass (extract and optimize FSM).
+
+15.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.f_axi_fsm_reg.
+Found FSM state register $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.m_axi_fsm_reg.
+
+15.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\f_axi_fsm_reg' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+  found $adff cell for state register: $procdff$1201
+  root of input selection tree: $0\f_axi_fsm_reg[2:0]
+  found reset state: 3'000 (from async reset)
+  found ctrl input: $procmux$1003_CMP
+  found ctrl input: $procmux$1006_CMP
+  found ctrl input: $procmux$1025_CMP
+  found ctrl input: $procmux$1009_CMP
+  found ctrl input: $procmux$1015_CMP
+  found ctrl input: \f_axi_request_done
+  found ctrl input: \aa_cfg_wvalid
+  found state code: 3'100
+  found ctrl input: \aa_cfg_rready
+  found ctrl input: $logic_and$config_ctrl.v:370$538_Y
+  found state code: 3'010
+  found ctrl input: \aa_cfg_awvalid
+  found ctrl input: \aa_cfg_arvalid
+  found state code: 3'001
+  found state code: 3'011
+  found ctrl output: $procmux$1003_CMP
+  found ctrl output: $procmux$1006_CMP
+  found ctrl output: $procmux$1025_CMP
+  found ctrl output: $procmux$1009_CMP
+  found ctrl output: $procmux$1015_CMP
+  ctrl inputs: { $logic_and$config_ctrl.v:370$538_Y \f_axi_request_done \aa_cfg_rready \aa_cfg_arvalid \aa_cfg_wvalid \aa_cfg_awvalid }
+  ctrl outputs: { $procmux$1025_CMP $procmux$1015_CMP $procmux$1003_CMP $procmux$1006_CMP $procmux$1009_CMP $0\f_axi_fsm_reg[2:0] }
+  transition:      3'000 6'---0-0 ->      3'000 8'01000000
+  transition:      3'000 6'---1-0 ->      3'001 8'01000001
+  transition:      3'000 6'-----1 ->      3'011 8'01000011
+  transition:      3'100 6'-0---- ->      3'100 8'00100100
+  transition:      3'100 6'-1---- ->      3'000 8'00100000
+  transition:      3'010 6'--0--- ->      3'010 8'10000010
+  transition:      3'010 6'--1--- ->      3'000 8'10000000
+  transition:      3'001 6'0----- ->      3'001 8'00001001
+  transition:      3'001 6'1----- ->      3'010 8'00001010
+  transition:      3'011 6'----0- ->      3'011 8'00010011
+  transition:      3'011 6'----1- ->      3'100 8'00010100
+Extracting FSM `\m_axi_fsm_reg' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+  found $adff cell for state register: $procdff$1191
+  root of input selection tree: $0\m_axi_fsm_reg[2:0]
+  found reset state: 3'000 (from async reset)
+  found ctrl input: $procmux$734_CMP
+  found ctrl input: $procmux$738_CMP
+  found ctrl input: $procmux$688_CMP
+  found ctrl input: $procmux$692_CMP
+  found ctrl input: $procmux$698_CMP
+  found ctrl input: \m_axi_wready
+  found ctrl input: $logic_and$config_ctrl.v:519$547_Y
+  found ctrl input: \m_axi_awready
+  found state code: 3'100
+  found ctrl input: \m_axi_rvalid
+  found ctrl input: $logic_and$config_ctrl.v:483$546_Y
+  found ctrl input: \m_axi_arready
+  found state code: 3'010
+  found ctrl input: $logic_and$config_ctrl.v:465$545_Y
+  found ctrl input: \m_axi_request_rw
+  found state code: 3'001
+  found state code: 3'011
+  found ctrl output: $procmux$734_CMP
+  found ctrl output: $procmux$698_CMP
+  found ctrl output: $procmux$692_CMP
+  found ctrl output: $procmux$688_CMP
+  found ctrl output: $procmux$738_CMP
+  ctrl inputs: { $logic_and$config_ctrl.v:483$546_Y $logic_and$config_ctrl.v:519$547_Y $logic_and$config_ctrl.v:465$545_Y \m_axi_rvalid \m_axi_arready \m_axi_wready \m_axi_awready \m_axi_request_rw }
+  ctrl outputs: { $procmux$738_CMP $0\m_axi_fsm_reg[2:0] $procmux$688_CMP $procmux$692_CMP $procmux$698_CMP $procmux$734_CMP }
+  transition:      3'000 8'--0----- ->      3'000 8'00000010
+  transition:      3'000 8'--1----0 ->      3'001 8'00010010
+  transition:      3'000 8'--1----1 ->      3'011 8'00110010
+  transition:      3'100 8'-----0-- ->      3'100 8'01000001
+  transition:      3'100 8'-----1-- ->      3'000 8'00000001
+  transition:      3'010 8'---0---- ->      3'010 8'00101000
+  transition:      3'010 8'---1---- ->      3'000 8'00001000
+  transition:      3'001 8'0---0--- ->      3'001 8'00010100
+  transition:      3'001 8'0---1--- ->      3'010 8'00100100
+  transition:      3'001 8'1------- ->      3'000 8'00000100
+  transition:      3'011 8'-0----0- ->      3'011 8'10110000
+  transition:      3'011 8'-0----1- ->      3'100 8'11000000
+  transition:      3'011 8'-1------ ->      3'000 8'10000000
+
+15.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\m_axi_fsm_reg$1253' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Optimizing FSM `$fsm$\f_axi_fsm_reg$1246' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+Removed 28 unused cells and 28 unused wires.
+<suppressed ~29 debug messages>
+
+15.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\f_axi_fsm_reg$1246' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+  Removing unused output signal $0\f_axi_fsm_reg[2:0] [0].
+  Removing unused output signal $0\f_axi_fsm_reg[2:0] [1].
+  Removing unused output signal $0\f_axi_fsm_reg[2:0] [2].
+Optimizing FSM `$fsm$\m_axi_fsm_reg$1253' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+  Removing unused output signal $0\m_axi_fsm_reg[2:0] [0].
+  Removing unused output signal $0\m_axi_fsm_reg[2:0] [1].
+  Removing unused output signal $0\m_axi_fsm_reg[2:0] [2].
+
+15.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\f_axi_fsm_reg$1246' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+Recoding FSM `$fsm$\m_axi_fsm_reg$1253' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+
+15.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\f_axi_fsm_reg$1246' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32':
+-------------------------------------
+
+  Information on FSM $fsm$\f_axi_fsm_reg$1246 (\f_axi_fsm_reg):
+
+  Number of input signals:    6
+  Number of output signals:   5
+  Number of state bits:       5
+
+  Input signals:
+    0: \aa_cfg_awvalid
+    1: \aa_cfg_wvalid
+    2: \aa_cfg_arvalid
+    3: \aa_cfg_rready
+    4: \f_axi_request_done
+    5: $logic_and$config_ctrl.v:370$538_Y
+
+  Output signals:
+    0: $procmux$1009_CMP
+    1: $procmux$1006_CMP
+    2: $procmux$1003_CMP
+    3: $procmux$1015_CMP
+    4: $procmux$1025_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 6'---0-0   ->     0 5'01000
+      1:     0 6'---1-0   ->     3 5'01000
+      2:     0 6'-----1   ->     4 5'01000
+      3:     1 6'-1----   ->     0 5'00100
+      4:     1 6'-0----   ->     1 5'00100
+      5:     2 6'--1---   ->     0 5'10000
+      6:     2 6'--0---   ->     2 5'10000
+      7:     3 6'1-----   ->     2 5'00001
+      8:     3 6'0-----   ->     3 5'00001
+      9:     4 6'----1-   ->     1 5'00010
+     10:     4 6'----0-   ->     4 5'00010
+
+-------------------------------------
+
+FSM `$fsm$\m_axi_fsm_reg$1253' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32':
+-------------------------------------
+
+  Information on FSM $fsm$\m_axi_fsm_reg$1253 (\m_axi_fsm_reg):
+
+  Number of input signals:    8
+  Number of output signals:   5
+  Number of state bits:       5
+
+  Input signals:
+    0: \m_axi_request_rw
+    1: \m_axi_awready
+    2: \m_axi_wready
+    3: \m_axi_arready
+    4: \m_axi_rvalid
+    5: $logic_and$config_ctrl.v:465$545_Y
+    6: $logic_and$config_ctrl.v:519$547_Y
+    7: $logic_and$config_ctrl.v:483$546_Y
+
+  Output signals:
+    0: $procmux$734_CMP
+    1: $procmux$698_CMP
+    2: $procmux$692_CMP
+    3: $procmux$688_CMP
+    4: $procmux$738_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 8'--0-----   ->     0 5'00010
+      1:     0 8'--1----0   ->     3 5'00010
+      2:     0 8'--1----1   ->     4 5'00010
+      3:     1 8'-----1--   ->     0 5'00001
+      4:     1 8'-----0--   ->     1 5'00001
+      5:     2 8'---1----   ->     0 5'01000
+      6:     2 8'---0----   ->     2 5'01000
+      7:     3 8'1-------   ->     0 5'00100
+      8:     3 8'0---1---   ->     2 5'00100
+      9:     3 8'0---0---   ->     3 5'00100
+     10:     4 8'-1------   ->     0 5'10000
+     11:     4 8'-0----1-   ->     1 5'10000
+     12:     4 8'-0----0-   ->     4 5'10000
+
+-------------------------------------
+
+15.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\f_axi_fsm_reg$1246' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Mapping FSM `$fsm$\m_axi_fsm_reg$1253' from module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+
+16. Executing OPT pass (performing simple optimizations).
+
+16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+<suppressed ~19 debug messages>
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Removed a total of 0 cells.
+
+16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \FSIC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FSIC_CLKRST..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+  Optimizing cells in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$1373: { $auto$fsm_map.cc:118:implement_pattern_cache$1367 $auto$fsm_map.cc:118:implement_pattern_cache$1371 }
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$1276: { $auto$fsm_map.cc:118:implement_pattern_cache$1266 $auto$fsm_map.cc:118:implement_pattern_cache$1270 $auto$fsm_map.cc:118:implement_pattern_cache$1274 }
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$1294: { $auto$fsm_map.cc:118:implement_pattern_cache$1288 $auto$fsm_map.cc:118:implement_pattern_cache$1292 }
+  Optimizing cells in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+  Optimizing cells in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \FSIC.
+  Optimizing cells in module \FSIC_CLKRST.
+Performed a total of 3 changes.
+
+16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Removed a total of 0 cells.
+
+16.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+Removed 0 unused cells and 25 unused wires.
+<suppressed ~1 debug messages>
+
+16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \FSIC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FSIC_CLKRST..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+  Optimizing cells in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+  Optimizing cells in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \FSIC.
+  Optimizing cells in module \FSIC_CLKRST.
+Performed a total of 0 changes.
+
+16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Removed a total of 0 cells.
+
+16.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+
+16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+16.16. Finished OPT passes. (There is nothing left to do.)
+
+17. Executing MEMORY pass.
+
+17.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+17.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+
+17.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+
+17.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+17.6. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+18. Executing OPT pass (performing simple optimizations).
+
+18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Removed a total of 0 cells.
+
+18.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \FSIC..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \FSIC_CLKRST..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+18.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+  Optimizing cells in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+  Optimizing cells in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+  Optimizing cells in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+  Optimizing cells in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+  Optimizing cells in module \FSIC.
+  Optimizing cells in module \FSIC_CLKRST.
+Performed a total of 0 changes.
+
+18.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES'.
+Finding identical cells in module `$paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\IRQ_MUX\pADDR_WIDTH=10'.
+Finding identical cells in module `$paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32'.
+Finding identical cells in module `$paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4'.
+Finding identical cells in module `$paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4'.
+Finding identical cells in module `\FSIC'.
+Finding identical cells in module `\FSIC_CLKRST'.
+Removed a total of 0 cells.
+
+18.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+18.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES..
+Finding unused cells or wires in module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\IRQ_MUX\pADDR_WIDTH=10..
+Finding unused cells or wires in module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32..
+Finding unused cells or wires in module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4..
+Finding unused cells or wires in module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4..
+Finding unused cells or wires in module \FSIC..
+Finding unused cells or wires in module \FSIC_CLKRST..
+
+18.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$461f3488c8f711562303248cdba058f0d0988456\IO_SERDES.
+Optimizing module $paramod\AXIL_AXIS\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIL_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_MSTR\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SLAV\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\AXIS_SW\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\CFG_CTRL\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\IRQ_MUX\pADDR_WIDTH=10.
+Optimizing module $paramod\LA_MUX\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\LOGIC_ANLZ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\MPRJ_IO\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_PRJ\pADDR_WIDTH=12\pDATA_WIDTH=32.
+Optimizing module $paramod\USER_SUBSYS\pADDR_WIDTH=15\pDATA_WIDTH=32.
+Optimizing module $paramod\fsic_coreclk_phase_cnt\pCLK_RATIO=4.
+Optimizing module $paramod\fsic_io_serdes_rx\pRxFIFO_DEPTH=5\pCLK_RATIO=4.
+Optimizing module FSIC.
+Optimizing module FSIC_CLKRST.
+
+18.9. Finished OPT passes. (There is nothing left to do.)
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 660fb19aff
+CPU: user 0.49s system 0.00s, MEM: 23.92 MB total, 17.98 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 32% 8x opt_clean (0 sec), 16% 8x opt_expr (0 sec), ...
