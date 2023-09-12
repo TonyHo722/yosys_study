@@ -1,0 +1,4 @@
+read_verilog config_ctrl.v
+
+hierarchy -check -top CFG_CTRL
+proc; opt; fsm; opt; memory; opt

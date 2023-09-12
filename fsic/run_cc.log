@@ -1,0 +1,704 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `run_cc.script' --
+
+1. Executing Verilog-2005 frontend: config_ctrl.v
+Parsing Verilog input from `config_ctrl.v' to AST representation.
+Generating RTLIL representation for module `\CFG_CTRL'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \CFG_CTRL
+
+2.2. Analyzing design hierarchy..
+Top module:  \CFG_CTRL
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:558$110 in module CFG_CTRL.
+Marked 10 switch rules as full_case in process $proc$config_ctrl.v:440$104 in module CFG_CTRL.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:413$101 in module CFG_CTRL.
+Marked 2 switch rules as full_case in process $proc$config_ctrl.v:333$98 in module CFG_CTRL.
+Marked 3 switch rules as full_case in process $proc$config_ctrl.v:279$94 in module CFG_CTRL.
+Marked 1 switch rules as full_case in process $proc$config_ctrl.v:254$76 in module CFG_CTRL.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:163$129'.
+  Set init value: \axi_rready_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:162$128'.
+  Set init value: \axi_araddr_o = 15'000000000000000
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:161$127'.
+  Set init value: \axi_arvalid_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:160$126'.
+  Set init value: \axi_wstrb_o = 4'0000
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:159$125'.
+  Set init value: \axi_wdata_o = 0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:158$124'.
+  Set init value: \axi_wvalid_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:157$123'.
+  Set init value: \axi_awaddr_o = 15'000000000000000
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:156$122'.
+  Set init value: \axi_awvalid_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:154$121'.
+  Set init value: \aa_cfg_arready_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:153$120'.
+  Set init value: \aa_cfg_wready_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:152$119'.
+  Set init value: \aa_cfg_awready_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:151$118'.
+  Set init value: \aa_cfg_rvalid_o = 1'0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:150$117'.
+  Set init value: \aa_cfg_rdata_o = 0
+Found init rule in `\CFG_CTRL.$proc$config_ctrl.v:116$116'.
+  Set init value: \axi_grant_o_reg = 1'0
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \axi_reset_n in `\CFG_CTRL.$proc$config_ctrl.v:558$110'.
+Found async reset \axi_reset_n in `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+Found async reset \wb_rst in `\CFG_CTRL.$proc$config_ctrl.v:413$101'.
+Found async reset \axi_reset_n in `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+Found async reset \wb_rst in `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+Found async reset \axi_reset_n in `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:163$129'.
+     1/1: $1\axi_rready_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:162$128'.
+     1/1: $1\axi_araddr_o[14:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:161$127'.
+     1/1: $1\axi_arvalid_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:160$126'.
+     1/1: $1\axi_wstrb_o[3:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:159$125'.
+     1/1: $1\axi_wdata_o[31:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:158$124'.
+     1/1: $1\axi_wvalid_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:157$123'.
+     1/1: $1\axi_awaddr_o[14:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:156$122'.
+     1/1: $1\axi_awvalid_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:154$121'.
+     1/1: $1\aa_cfg_arready_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:153$120'.
+     1/1: $1\aa_cfg_wready_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:152$119'.
+     1/1: $1\aa_cfg_awready_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:151$118'.
+     1/1: $1\aa_cfg_rvalid_o[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:150$117'.
+     1/1: $1\aa_cfg_rdata_o[31:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:116$116'.
+     1/1: $1\axi_grant_o_reg[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:558$110'.
+     1/1: $0\user_prj_sel_o[4:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+     1/13: $0\axi_rready_o[0:0]
+     2/13: $0\axi_araddr_o[14:0]
+     3/13: $0\axi_arvalid_o[0:0]
+     4/13: $0\axi_wstrb_o[3:0]
+     5/13: $0\axi_wdata_o[31:0]
+     6/13: $0\axi_wvalid_o[0:0]
+     7/13: $0\axi_awaddr_o[14:0]
+     8/13: $0\axi_awvalid_o[0:0]
+     9/13: $0\m_axi_fsm_reg[2:0]
+    10/13: $0\f_axi_rdata[31:0]
+    11/13: $0\f_axi_request_done[0:0]
+    12/13: $0\wb_axi_rdata[31:0]
+    13/13: $0\wb_axi_request_done[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:413$101'.
+     1/1: $0\axi_grant_o_reg[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+     1/11: $0\aa_cfg_arready_o[0:0]
+     2/11: $0\aa_cfg_wready_o[0:0]
+     3/11: $0\aa_cfg_awready_o[0:0]
+     4/11: $0\aa_cfg_rvalid_o[0:0]
+     5/11: $0\aa_cfg_rdata_o[31:0]
+     6/11: $0\f_axi_wdata[31:0]
+     7/11: $0\f_axi_request_add[31:0]
+     8/11: $0\f_axi_wstrb[3:0]
+     9/11: $0\f_axi_request_rw[0:0]
+    10/11: $0\f_axi_request[0:0]
+    11/11: $0\f_axi_fsm_reg[2:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+     1/8: $0\wbs_rdata_o[31:0]
+     2/8: $0\wbs_ack_o[0:0]
+     3/8: $0\wb_axi_wdata[31:0]
+     4/8: $0\wb_axi_request_add[31:0]
+     5/8: $0\wb_axi_wstrb[3:0]
+     6/8: $0\wb_axi_request_rw[0:0]
+     7/8: $0\wb_axi_request[0:0]
+     8/8: $0\wb_fsm_reg[0:0]
+Creating decoders for process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+     1/7: $0\cc_up_enable_o[0:0]
+     2/7: $0\cc_la_enable_o[0:0]
+     3/7: $0\cc_is_enable_o[0:0]
+     4/7: $0\cc_as_enable_o[0:0]
+     5/7: $0\cc_aa_enable_o[0:0]
+     6/7: $0\cc_sub_enable[0:0]
+     7/7: $0\cc_enable[0:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\CFG_CTRL.\user_prj_sel_o' using process `\CFG_CTRL.$proc$config_ctrl.v:558$110'.
+  created $adff cell `$procdff$557' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_request_done' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$558' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_rdata' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$559' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_request_done' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$560' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_rdata' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$561' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\m_axi_fsm_reg' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$562' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_awvalid_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$563' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_awaddr_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$564' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_wvalid_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$565' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_wdata_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$566' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_wstrb_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$567' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_arvalid_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$568' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_araddr_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$569' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_rready_o' using process `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+  created $adff cell `$procdff$570' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\axi_grant_o_reg' using process `\CFG_CTRL.$proc$config_ctrl.v:413$101'.
+  created $adff cell `$procdff$571' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_fsm_reg' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$572' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_request' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$573' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_request_rw' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$574' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_wstrb' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$575' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_request_add' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$576' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\f_axi_wdata' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$577' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\aa_cfg_rdata_o' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$578' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\aa_cfg_rvalid_o' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$579' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\aa_cfg_awready_o' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$580' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\aa_cfg_wready_o' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$581' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\aa_cfg_arready_o' using process `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+  created $adff cell `$procdff$582' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\wb_fsm_reg' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$583' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_request' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$584' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_request_rw' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$585' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_wstrb' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$586' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_request_add' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$587' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wb_axi_wdata' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$588' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wbs_ack_o' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$589' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\wbs_rdata_o' using process `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+  created $adff cell `$procdff$590' with positive edge clock and positive level reset.
+Creating register for signal `\CFG_CTRL.\cc_enable' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$591' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\cc_sub_enable' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$592' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\cc_aa_enable_o' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$593' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\cc_as_enable_o' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$594' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\cc_is_enable_o' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$595' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\cc_la_enable_o' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$596' with positive edge clock and negative level reset.
+Creating register for signal `\CFG_CTRL.\cc_up_enable_o' using process `\CFG_CTRL.$proc$config_ctrl.v:254$76'.
+  created $adff cell `$procdff$597' with positive edge clock and negative level reset.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:163$129'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:162$128'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:161$127'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:160$126'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:159$125'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:158$124'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:157$123'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:156$122'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:154$121'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:153$120'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:152$119'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:151$118'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:150$117'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:116$116'.
+Found and cleaned up 2 empty switches in `\CFG_CTRL.$proc$config_ctrl.v:558$110'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:558$110'.
+Found and cleaned up 15 empty switches in `\CFG_CTRL.$proc$config_ctrl.v:440$104'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:440$104'.
+Found and cleaned up 5 empty switches in `\CFG_CTRL.$proc$config_ctrl.v:413$101'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:413$101'.
+Found and cleaned up 7 empty switches in `\CFG_CTRL.$proc$config_ctrl.v:333$98'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:333$98'.
+Found and cleaned up 6 empty switches in `\CFG_CTRL.$proc$config_ctrl.v:279$94'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:279$94'.
+Removing empty process `CFG_CTRL.$proc$config_ctrl.v:254$76'.
+Cleaned up 35 empty switches.
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+<suppressed ~43 debug messages>
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+<suppressed ~198 debug messages>
+Removed a total of 66 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \CFG_CTRL..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$370: \axi_grant_o_reg -> 1'0
+      Replacing known input bits on port B of cell $procmux$368: \axi_grant_o_reg -> 1'1
+      Replacing known input bits on port A of cell $procmux$366: \axi_grant_o_reg -> 1'1
+      Replacing known input bits on port B of cell $procmux$374: \axi_grant_o_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$372: \axi_grant_o_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$550: \wb_fsm_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$548: \wb_fsm_reg -> 1'1
+      Replacing known input bits on port B of cell $procmux$554: \wb_fsm_reg -> 1'0
+      Replacing known input bits on port A of cell $procmux$552: \wb_fsm_reg -> 1'0
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~47 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \CFG_CTRL.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+<suppressed ~24 debug messages>
+Removed a total of 8 cells.
+
+4.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+Removed 5 unused cells and 281 unused wires.
+<suppressed ~10 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \CFG_CTRL..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \CFG_CTRL.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing FSM pass (extract and optimize FSM).
+
+5.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register CFG_CTRL.f_axi_fsm_reg.
+Found FSM state register CFG_CTRL.m_axi_fsm_reg.
+
+5.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\f_axi_fsm_reg' from module `\CFG_CTRL'.
+  found $adff cell for state register: $procdff$572
+  root of input selection tree: $0\f_axi_fsm_reg[2:0]
+  found reset state: 3'000 (from async reset)
+  found ctrl input: $procmux$391_CMP
+  found ctrl input: $procmux$395_CMP
+  found ctrl input: $procmux$405_CMP
+  found ctrl input: $procmux$381_CMP
+  found ctrl input: $procmux$387_CMP
+  found ctrl input: \f_axi_request_done
+  found ctrl input: \aa_cfg_wvalid
+  found state code: 3'100
+  found ctrl input: \aa_cfg_rready
+  found ctrl input: $logic_and$config_ctrl.v:370$100_Y
+  found state code: 3'010
+  found ctrl input: \aa_cfg_awvalid
+  found ctrl input: \aa_cfg_arvalid
+  found state code: 3'001
+  found state code: 3'011
+  found ctrl output: $procmux$391_CMP
+  found ctrl output: $procmux$395_CMP
+  found ctrl output: $procmux$405_CMP
+  found ctrl output: $procmux$381_CMP
+  found ctrl output: $procmux$387_CMP
+  ctrl inputs: { $logic_and$config_ctrl.v:370$100_Y \f_axi_request_done \aa_cfg_wvalid \aa_cfg_arvalid \aa_cfg_awvalid \aa_cfg_rready }
+  ctrl outputs: { $procmux$405_CMP $procmux$395_CMP $procmux$391_CMP $procmux$387_CMP $procmux$381_CMP $0\f_axi_fsm_reg[2:0] }
+  transition:      3'000 6'---00- ->      3'000 8'00010000
+  transition:      3'000 6'---10- ->      3'001 8'00010001
+  transition:      3'000 6'----1- ->      3'011 8'00010011
+  transition:      3'100 6'-0---- ->      3'100 8'00100100
+  transition:      3'100 6'-1---- ->      3'000 8'00100000
+  transition:      3'010 6'-----0 ->      3'010 8'10000010
+  transition:      3'010 6'-----1 ->      3'000 8'10000000
+  transition:      3'001 6'0----- ->      3'001 8'00001001
+  transition:      3'001 6'1----- ->      3'010 8'00001010
+  transition:      3'011 6'--0--- ->      3'011 8'01000011
+  transition:      3'011 6'--1--- ->      3'100 8'01000100
+Extracting FSM `\m_axi_fsm_reg' from module `\CFG_CTRL'.
+  found $adff cell for state register: $procdff$562
+  root of input selection tree: $0\m_axi_fsm_reg[2:0]
+  found reset state: 3'000 (from async reset)
+  found ctrl input: $procmux$186_CMP
+  found ctrl input: $procmux$190_CMP
+  found ctrl input: $procmux$140_CMP
+  found ctrl input: $procmux$144_CMP
+  found ctrl input: $procmux$150_CMP
+  found ctrl input: \m_axi_wready
+  found ctrl input: $logic_and$config_ctrl.v:519$109_Y
+  found ctrl input: \m_axi_awready
+  found state code: 3'100
+  found ctrl input: \m_axi_rvalid
+  found ctrl input: $logic_and$config_ctrl.v:483$108_Y
+  found ctrl input: \m_axi_arready
+  found state code: 3'010
+  found ctrl input: $logic_and$config_ctrl.v:465$107_Y
+  found ctrl input: \m_axi_request_rw
+  found state code: 3'001
+  found state code: 3'011
+  found ctrl output: $procmux$186_CMP
+  found ctrl output: $procmux$190_CMP
+  found ctrl output: $procmux$140_CMP
+  found ctrl output: $procmux$144_CMP
+  found ctrl output: $procmux$150_CMP
+  ctrl inputs: { $logic_and$config_ctrl.v:519$109_Y $logic_and$config_ctrl.v:483$108_Y $logic_and$config_ctrl.v:465$107_Y \m_axi_rvalid \m_axi_arready \m_axi_wready \m_axi_awready \m_axi_request_rw }
+  ctrl outputs: { $procmux$190_CMP $procmux$186_CMP $procmux$150_CMP $procmux$144_CMP $procmux$140_CMP $0\m_axi_fsm_reg[2:0] }
+  transition:      3'000 8'--0----- ->      3'000 8'00100000
+  transition:      3'000 8'--1----0 ->      3'001 8'00100001
+  transition:      3'000 8'--1----1 ->      3'011 8'00100011
+  transition:      3'100 8'-----0-- ->      3'100 8'01000100
+  transition:      3'100 8'-----1-- ->      3'000 8'01000000
+  transition:      3'010 8'---0---- ->      3'010 8'00001010
+  transition:      3'010 8'---1---- ->      3'000 8'00001000
+  transition:      3'001 8'-0--0--- ->      3'001 8'00010001
+  transition:      3'001 8'-0--1--- ->      3'010 8'00010010
+  transition:      3'001 8'-1------ ->      3'000 8'00010000
+  transition:      3'011 8'0-----0- ->      3'011 8'10000011
+  transition:      3'011 8'0-----1- ->      3'100 8'10000100
+  transition:      3'011 8'1------- ->      3'000 8'10000000
+
+5.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\m_axi_fsm_reg$605' from module `\CFG_CTRL'.
+Optimizing FSM `$fsm$\f_axi_fsm_reg$598' from module `\CFG_CTRL'.
+
+5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+Removed 28 unused cells and 28 unused wires.
+<suppressed ~29 debug messages>
+
+5.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\f_axi_fsm_reg$598' from module `\CFG_CTRL'.
+  Removing unused output signal $0\f_axi_fsm_reg[2:0] [0].
+  Removing unused output signal $0\f_axi_fsm_reg[2:0] [1].
+  Removing unused output signal $0\f_axi_fsm_reg[2:0] [2].
+Optimizing FSM `$fsm$\m_axi_fsm_reg$605' from module `\CFG_CTRL'.
+  Removing unused output signal $0\m_axi_fsm_reg[2:0] [0].
+  Removing unused output signal $0\m_axi_fsm_reg[2:0] [1].
+  Removing unused output signal $0\m_axi_fsm_reg[2:0] [2].
+
+5.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\f_axi_fsm_reg$598' from module `\CFG_CTRL' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+Recoding FSM `$fsm$\m_axi_fsm_reg$605' from module `\CFG_CTRL' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+
+5.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\f_axi_fsm_reg$598' from module `\CFG_CTRL':
+-------------------------------------
+
+  Information on FSM $fsm$\f_axi_fsm_reg$598 (\f_axi_fsm_reg):
+
+  Number of input signals:    6
+  Number of output signals:   5
+  Number of state bits:       5
+
+  Input signals:
+    0: \aa_cfg_rready
+    1: \aa_cfg_awvalid
+    2: \aa_cfg_arvalid
+    3: \aa_cfg_wvalid
+    4: \f_axi_request_done
+    5: $logic_and$config_ctrl.v:370$100_Y
+
+  Output signals:
+    0: $procmux$381_CMP
+    1: $procmux$387_CMP
+    2: $procmux$391_CMP
+    3: $procmux$395_CMP
+    4: $procmux$405_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 6'---00-   ->     0 5'00010
+      1:     0 6'---10-   ->     3 5'00010
+      2:     0 6'----1-   ->     4 5'00010
+      3:     1 6'-1----   ->     0 5'00100
+      4:     1 6'-0----   ->     1 5'00100
+      5:     2 6'-----1   ->     0 5'10000
+      6:     2 6'-----0   ->     2 5'10000
+      7:     3 6'1-----   ->     2 5'00001
+      8:     3 6'0-----   ->     3 5'00001
+      9:     4 6'--1---   ->     1 5'01000
+     10:     4 6'--0---   ->     4 5'01000
+
+-------------------------------------
+
+FSM `$fsm$\m_axi_fsm_reg$605' from module `\CFG_CTRL':
+-------------------------------------
+
+  Information on FSM $fsm$\m_axi_fsm_reg$605 (\m_axi_fsm_reg):
+
+  Number of input signals:    8
+  Number of output signals:   5
+  Number of state bits:       5
+
+  Input signals:
+    0: \m_axi_request_rw
+    1: \m_axi_awready
+    2: \m_axi_wready
+    3: \m_axi_arready
+    4: \m_axi_rvalid
+    5: $logic_and$config_ctrl.v:465$107_Y
+    6: $logic_and$config_ctrl.v:483$108_Y
+    7: $logic_and$config_ctrl.v:519$109_Y
+
+  Output signals:
+    0: $procmux$140_CMP
+    1: $procmux$144_CMP
+    2: $procmux$150_CMP
+    3: $procmux$186_CMP
+    4: $procmux$190_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 8'--0-----   ->     0 5'00100
+      1:     0 8'--1----0   ->     3 5'00100
+      2:     0 8'--1----1   ->     4 5'00100
+      3:     1 8'-----1--   ->     0 5'01000
+      4:     1 8'-----0--   ->     1 5'01000
+      5:     2 8'---1----   ->     0 5'00001
+      6:     2 8'---0----   ->     2 5'00001
+      7:     3 8'-1------   ->     0 5'00010
+      8:     3 8'-0--1---   ->     2 5'00010
+      9:     3 8'-0--0---   ->     3 5'00010
+     10:     4 8'1-------   ->     0 5'10000
+     11:     4 8'0-----1-   ->     1 5'10000
+     12:     4 8'0-----0-   ->     4 5'10000
+
+-------------------------------------
+
+5.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\f_axi_fsm_reg$598' from module `\CFG_CTRL'.
+Mapping FSM `$fsm$\m_axi_fsm_reg$605' from module `\CFG_CTRL'.
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+<suppressed ~19 debug messages>
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \CFG_CTRL..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~49 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \CFG_CTRL.
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$628: { $auto$fsm_map.cc:118:implement_pattern_cache$618 $auto$fsm_map.cc:118:implement_pattern_cache$622 $auto$fsm_map.cc:118:implement_pattern_cache$626 }
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$637: { $auto$fsm_map.cc:118:implement_pattern_cache$631 $auto$fsm_map.cc:118:implement_pattern_cache$635 }
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$646: { $auto$fsm_map.cc:118:implement_pattern_cache$640 $auto$fsm_map.cc:118:implement_pattern_cache$644 }
+  Optimizing cells in module \CFG_CTRL.
+Performed a total of 3 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+Removed 0 unused cells and 25 unused wires.
+<suppressed ~1 debug messages>
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+
+6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \CFG_CTRL..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~49 debug messages>
+
+6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \CFG_CTRL.
+Performed a total of 0 changes.
+
+6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+Removed a total of 0 cells.
+
+6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+
+6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+
+6.16. Finished OPT passes. (There is nothing left to do.)
+
+7. Executing MEMORY pass.
+
+7.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+7.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+
+7.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+
+7.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.6. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \CFG_CTRL..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~49 debug messages>
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \CFG_CTRL.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\CFG_CTRL'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \CFG_CTRL..
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module CFG_CTRL.
+
+8.9. Finished OPT passes. (There is nothing left to do.)
+
+End of script. Logfile hash: c9dffe2da6
+CPU: user 0.21s system 0.01s, MEM: 20.42 MB total, 14.40 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 30% 8x opt_clean (0 sec), 17% 8x opt_expr (0 sec), ...
