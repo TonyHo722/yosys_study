@@ -1,0 +1,2 @@
+#!/bin/bash
+yosys -s run_aa.script

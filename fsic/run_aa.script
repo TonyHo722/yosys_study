@@ -1,0 +1,9 @@
+read_verilog -sv axi_ctrl_logic.sv.patch
+read_verilog -sv axil_axis.sv
+read_verilog -sv axilite_master.sv
+read_verilog -sv axilite_slave.sv
+read_verilog -sv axis_master.sv
+read_verilog -sv axis_slave.sv
+
+hierarchy -check -top AXIL_AXIS
+proc; opt; fsm; opt; memory; opt
