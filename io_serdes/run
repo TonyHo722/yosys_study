@@ -1,2 +1,2 @@
 #!/bin/bash
-yosys -s run.script
+yosys -s run.script -o io_serdes_synth.v
