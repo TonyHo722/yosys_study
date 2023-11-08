@@ -1,2 +1,2 @@
 #!/bin/bash
-yosys -s run.script
+yosys -s run.script -o fsic_synth.v
